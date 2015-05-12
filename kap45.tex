@@ -1,0 +1,84 @@
+\subsection{Feldquantisierung der Diractheorie}
+\subsubsection{Erzeugungs- und Vernichtungsoperatoren}
+Einteilchenlösungen:
+\begin{eqnarray*}
+\psi^\pm_{\sigma k}(x) \g \sqrt{\frac{m}{VE_k}} u_\sigma^\pm(k) \ e^{\mp i k x}\\
+\text{mit  }u_\sigma^+(k) \g u_\sigma(k) = \sqrt{\frac{E+m}{2 m}} \left(\begin{array}c \chi_\sigma\\\frac{\vec \sigma \vec k}{E+m}\chi_\sigma\end{array}\ri)\\
+u_\sigma^-(k) \g v_\sigma(k) = \sqrt{\frac{E+m}{2 m}} \left(\begin{array}c \frac{\vec \sigma \vec k}{E+m} \chi_\sigma\\\chi_\sigma\end{array}\ri)
+\end{eqnarray*}
+Es gilt mit adjungierten Spinoren
+\begin{eqnarray*} \bar u_\sigma^\alpha \g u_\sigma^{\alpha \dagger}\gamma^0\qquad \alpha = \pm\\
+\bar u_\sigma^\alpha u_{\sigma'}^\beta \g\alpha \delta_{\alpha \beta }\delta_{\sigma\sigma'}
+\end{eqnarray*}
+
+\underline{Definition}
+\begin{center}
+	\begin{tabular}{|l l|l|}\hline
+		$b_{\sigma k}^\dagger$& erzeugt & Elektronen \\ \cline{1-2}
+		$b_{\sigma k}$ & vernichtet & \\\hline
+		$d_{\sigma k}^\dagger$ & erzeugt & Positronen \\ \cline{1-2}
+		$d_{\sigma k}$ & vernichtet&\\\hline
+	\end{tabular}
+\end{center}
+Spinor $u^\pm_\sigma (\vec k)$ mit Energie $ E = k^0 = \sqrt{k^2 + m^2} > 0 $ und Spin  $ \sigma$ . 
+Da Elektronen/Positronen Fermionen sind, führen wir Antivertauschungsrelationen ein:
+\begin{eqnarray*}
+\left \{b_{\sigma k}, b^+ _{\sigma'k'}\ri \} = \delta_{\sigma\sigma'}\delta_{k k'}% = \left \{\delta_{\delta k}, \delta^\dagger_{\sigma' k'}\ri\}
+\qquad \qquad \{d_{\sigma k},d_{\sigma' k'}^+ \} = \delta_{\sigma \sigma'}\delta_{k k'}
+\end{eqnarray*}
+alle anderen verschwinden.
+\subsubsection{Feldoperatoren}
+Wir entwickeln die Feldoperatoren nach einem \underline{vollständigen} Satz von Lösungen.
+\begin{eqnarray*}
+\wh\Psi(x) = \sum_{\sigma k } \underbrace{\wh\Psi^+_{\sigma k}(x)b_{\sigma k}}_{\text{nur für Elektronen}} + \underbrace{\wh\Psi^-_{\sigma k}(x) d_{\alpha k }^\dagger(x) }_{\text{wegen Vollständigkeit}}
+\end{eqnarray*}
+Der adjungierte Feldoperator
+\begin{eqnarray*}
+\bar{\wh\Psi}(x) = \wh\Psi^\dagger(x) \gamma^0 = \sum_{\sigma k}\bar{\wh\Psi}^+_{\sigma k}(x) b_{\sigma k}^\dagger + \bar{\wh\Psi}_{\sigma k}^-(x) d_{\sigma k}
+\end{eqnarray*}
+Die Feldoperatoren erfüllen komplizierte Vertauschungsrelationen, da die Kausalität (welche sich mit Lichtgeschwindigkeit ausbreitet) gewahrt bleiben muss. Man findet jedoch für gleiche Zeiten (also beispielsweise im nichtrelativistischen Grenzfall) folgende Vertauschungsrelationen: 
+\begin{eqnarray*}
+\left\{\wh\Psi_\alpha(t,\vec x), \wh\Psi_\beta^\dagger(t,\vec x)\ri\} = \delta_{\alpha\beta}\delta(\vec x-\vec x')
+\end{eqnarray*}
+d.h. $\wh\Psi$ und $\wh\Psi$ erfüllen die für fermionische Feldoperatoren geforderten Vertauschungsrelationen.
+
+\underline{Spin-Statistik-Theorem} 
+Teilchen mit ganzzahligem/halbzahligem Spin sind Bosonen/Fermionen. Ursache ist, dass die entsprechenden Feldoperatoren für raumartige Abstände vertauschen/antivertauschen müssen.
+
+\subsubsection{Hamiltonoperator}
+Der Vierer-Impulsoperator ist
+\begin{eqnarray*}
+\hat p^\mu &=& \hbar \int d^3x \ \bar{\wh\Psi}(x) (i\dell^\mu \gamma_0) \wh\Psi(x)\\
+&\vdots&\\
+&=& \hbar\sum_{ k \sigma} k^\mu \left( \hat b^\dagger_{\sigma k }\hat b_{\sigma k} - \hat d_{\sigma k}\hat d^\dagger _{\sigma k}\ri ).
+\end{eqnarray*}
+Den Hamiltonoperator erhalten wir als die 0-Komponente des Vierer-Impulsoperators. 
+\begin{eqnarray*}
+\wh\ham &=& \hat p^0 = \sum_{k \sigma} E_{k}\left(\hat b^\dagger_{\sigma k} \hat b_{\sigma k} - \hat d_{\sigma k}\hat d^\dagger _{\sigma k}\ri)
+\\
+&=& \sum_{k\sigma} E_{k}\big(\underbrace{\hat b^\dagger_{\sigma k }\hat b_{\sigma k}}_{=\hat n^+_{\sigma k}} + \underbrace{\hat d_{\sigma k }^\dagger\hat d_{\sigma k}}_{=\hat n^-_{\sigma k}} -\1 \big) \qquad  \text{mit: } E_k=\hbar k^0=\sqrt{m^2c^4+c^2\hbar^2 \vec{k}^2}
+\end{eqnarray*}
+Für die Umformung wurde dabei die Antivertauschungsrelation: $\hat d \hat d^\dagger = \1 -\hat d^\dagger\hat d$
+
+Die $\hat n_{k\sigma}$ sind Teilchenzahloperatoren für den Zustand $k\sigma$. Es gilt: $(\hat n_{\sigma k}^\alpha)^2 = \hat n_{\sigma k}^\alpha$, damit hat $n_{\sigma k}^\alpha$ die Eigenwerte 0 und 1. 
+
+Damit ist die Energie immer positiv, da sowohl die Elektronen als auch die Positronen einen positiven Energiebeitrag liefern.
+
+Der letzte Term liefert eine (unendliche) Nullpunktsenergie selbst im Vakuumszustand.
+
+Wir subtrahieren diesen Term vom Hamiltonoperator, um zur physikalischen Observablen Energie zu kommen.
+\begin{eqnarray*}
+\wh\ham_{\text{neu}} \g \sum \limits_{\sigma k} E_{k} \left (\hat b_{\sigma k}^\dagger \hat b_{\sigma k}+\hat d_{\sigma k}^\dagger\hat d_{\sigma k}\ri)\\
+\hat\vec p_{\text{neu}} \g \sum \limits_{\sigma k}\hbar \vec k \left(\hat b_{\sigma k}^\dagger \hat b_{\sigma k} + \hat d_{\sigma k}^\dagger \hat d_{\sigma k}\ri)
+\end{eqnarray*}
+Der Ladungoperator $\hat Q$ entspricht der 0-Komponte der Viererstromdichte $\hat j^\mu$
+\begin{eqnarray*}
+\hat Q &=& -e \int \mathrm{d}^3x\; \bar{\wh\Psi}\gamma_0\wh\Psi = j^0 = \dots = -e \sum \limits_{\sigma k}\left(\hat b_{\sigma k}^\dagger \hat b_{\sigma k}-\hat d_{\sigma k}^\dagger \hat d_{\sigma k}\ri) 
+\\
+\Rightarrow\quad \langle\hat Q\rangle &=& \bra{\psi}{\hat Q}\ket{\psi} =  \Bigg{\{}\!\!\begin{array}{ll} \bra{0}\hat b_{k\sigma} \;\hat Q\; \hat b_{k\sigma}^\dagger\ket{0} & = -e  \\ \bra{0}\hat d_{k\sigma} \;\hat Q\; \hat d_{k\sigma}^\dagger\ket{0} & = +e  \end{array}
+\end{eqnarray*}
+Damit erzeugt $\hat b^\dagger_{k\sigma}$ Elektronen mit negativer Ladung $-e$ und $\hat d^\dagger_{k\sigma}$ Positronen mit positiver Ladung $+e$. 
+
+
+
+

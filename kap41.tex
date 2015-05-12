@@ -1,0 +1,86 @@
+
+\underline{Motivation}
+\begin{itemize}
+\item relativistische Einteilchenteorie führt zu Widersprüchen.
+\item Kerne, Atome, Moleküle, Festkörper bestehen aus großer Anzahl Teilchen
+\item Elementarteilchen- und -anregungen können erzeugt oder vernichtet werden
+\end{itemize}
+\subsection{Teilchensysteme}
+\subsubsection{Ein Teilchen}
+Wellenfunktion$\qquad \psi(\vec r, t)$\\
+Schrödingergleichung \begin{eqnarray*} i\hbar \partial_t \psi = \ham \psi \qquad \ham = T + U\quad U = U(\vec r)\quad T = \frac{\vec p^2}{2m}\end{eqnarray*}
+\subsubsection{Zwei identische Teilchen}
+Wellenfunktion $\psi(\vec r_1,\vec r_2,)$ hängt nun von beiden Koordinaten ab.\\
+Beide Teilchen sind identisch, d.h. wenn wir die beiden Koordinaten vertauschen, darf sich die Physik sich nicht ändern.\\
+z.B. Wahrscheinlichkeitsdichte
+\begin{eqnarray*}
+W(\vec r_1,\vec r_2)\g \left |\psi(\vec r_1,\vec r_2)\ri|^2 = W(\vec r_2,\vec r_1) = \left |\psi(\vec r_2,\vec r_1)\ri|^2\\
+\Longrightarrow \psi(\vec r_1,\vec r_2) \g e^{i\varphi} \psi(\vec r_2,\vec r_1)
+\end{eqnarray*}
+In der Praxis kommen zwei Fälle vor
+\begin{eqnarray*}
+\psi(\vec r_1, \vec r_2) \g \psi(\vec r_2,\vec r_1) \qquad\qquad \begin{array}c\text{Bosonen (Photon, Phonon)}\\\text{Teilchen mit ganzem Spin}\end{array}\\
+-\psi(\vec r_2,\vec r_1) \g \psi(\vec r_1,\vec r_2) \qquad\qquad \begin{array}c \text{Fermionen(Elektron)}\\\text{Teilchen mit halbzahligem Spin}\end{array}
+\end{eqnarray*}
+Wenn die Teilchen sich jeweils in der Wellenfunktion $\phi_1(\vec r)$ oder $\phi_2(\vec r)$ befinden, so erhalten wir die Zweiteilchenwellenfunktion
+\begin{eqnarray*}
+\psi_\pm (\vec r_1,\vec r_2) \g \frac 1 {\sqrt{2}} \left[\phi_1(\vec r_1)\phi_2(\vec r_2)\pm\phi_2(\vec r_1)\phi_1(\vec r_2)\ri]\\
+\text{ mit  }&+& \text{für Bosonen}\\
+\text{und   }&-&\text{für Fermionen}
+\end{eqnarray*}
+Folge: Pauli-Verbot für zwei Fermionen im gleichen Orbital $\phi_1 = \phi_2$, da sonst gilt:
+\begin{eqnarray*} \psi_- = \frac 1 {\sqrt 2}\left[\phi_1(\vec r_1)\phi_1(\vec r_2) - \phi_1(\vec r_2)\phi_1(\vec r_1) \ri] = 0
+\end{eqnarray*}
+Hamiltonoperator enthält die Einteilchenhamiltonoperatoren und die Zweiteilchenwechselwirkung
+\begin{eqnarray*}
+\ham_2 \g \sum \limits_{\alpha=1}^2 \ham(\vec r_\alpha, \vec p_\alpha) + V(\vec r_1, \vec r_2)\\
+\text{ wobei  }&{}& \ham(\vec r, \vec p) = T(\vec p) + U(\vec r)
+\end{eqnarray*}
+z.B. Coulomb-Wechselwirkung
+\begin{eqnarray*} V(\vec r_1,\vec r_2) =\frac{e^2}{4\pi\varepsilon_0 |\vec r_1-\vec r_2|}\end{eqnarray*}
+\subsubsection{Viele Teilchen}
+Vereinfachte Schreibweise mit (Anti-) Symmetrisierungsoperator $S_+\ (S_-)$.\\
+Dieser macht aus dem Produkt von $n$ Wellenfunktionen die symmetrisierte Form, bei der alle Koordinaten permutiert werden (Bei Fermionen ergibt jede Permutation ein Minuszeichen).\\
+Wellenfunktion für $N$ Teilchen ist:
+\begin{eqnarray*} \psi_{\{i\}}^\pm \{\vec r_1, \dots,\vec r_N\} = \frac 1 {\sqrt N} S_\pm \left(\phi_{i_1}(\vec r_1), \dots \phi_{i_N}(\vec r_N)\ri)
+\end{eqnarray*}
+Für Fermionen kann dies als Slater-Determinante  geschrieben werden:
+\begin{eqnarray*}
+\psi_N^- = \frac 1 {\sqrt N} \left| \begin{array}{cccc}\phi_{i_1}(\vec r_1) & \phi_{i_2}(\vec r_1) & \dots&\phi_{i_N}(\vec r_1)\\ \vdots& {\vdots}&{\ddots}&\vdots\\\phi_{i_1}(\vec r_N) & \phi_{i_2}(\vec r_N)&\dots&\phi_{i_N}(\vec r_N)\end{array}\ri |
+\end{eqnarray*}
+Hamiltonoperator:
+\begin{eqnarray*}
+\ham _N = \sum \limits_{\alpha = 1}^N \ham (\vec r_{\alpha}, \vec p_\alpha ) + \frac 1 2 \sum \limits_{\alpha \neq \beta} V(\vec r_\alpha,\vec r_\beta ) \end{eqnarray*}
+Für allgemeine Zustände bilden die $\psi_{\{i\}}^\pm$ für alle $\{i\}$ eine Basis im $N$-Teilchen Hilbertraum.
+
+Es gilt in Ket- Schreibweise
+\begin{eqnarray*} \left | \psi_N \ro = \sum \limits_{\{i\}} c_{i_1} \dots c_{i_N} S^\pm \left ( \left | i_1 \ro \left | i_2 \ro \dots \left | i_N \ro \ri)
+\end{eqnarray*}
+Die Zustände können vereinfacht in der linear unabhängigen sogenannten Besetzungszahlbasis dargestellt werden.
+Wir wählen für jedem äquivalenten Zustand einen Vertreter aus.
+\begin{eqnarray*} \left |n_1,n_2, \dots \ro = \left \{ \begin{array}{rc} S^- \left(\left| i_1 \ro \left | i_2 \ro \dots \left | i_N\ro \ri)&\text{Fermionen} \\ \frac 1 {\sqrt{n_1 \cdot n_2 \dots}} S^+ \left(\left| i_1 \ro \left | i_2 \ro \dots \left | i_N\ro \ri)&\text{Bosonen}\end{array}\ri.
+\end{eqnarray*}
+$n_i$ gibt an wie vielfach der Zustand $i$ besetzt wird. Für Fermionen gilt $n_i = 0,1$ für Bosonen $n_i = 0,1,2,\dots$\\
+Zusammen:
+\begin{eqnarray*} N = \sum \limits _i ^\infty n_i\end{eqnarray*}
+Besetzungszahlzustände bilden eine vollständige Orthonormalbasis im $N$-Teilchen Hilbertraum.
+\begin{eqnarray*}
+\lo n_1,n_2,\dots \s n'_1,n'_2,\dots \ro = \delta_{n_1n'_1}\delta_{n_2n'_2}\dots\\
+\sum \limits_{n_1 = 0}^{1(\infty)}\sum \limits_{n_2 = 0}^{1(\infty)}\dots \delta_{N_i \sum \limits _i n_i }\s n_1, n_2,\dots\big>\big< n_1,n_2,\dots\s = \mathds 1
+\end{eqnarray*}
+
+
+\subsubsection{Fockraum}
+Wir bilden die direkte Summe aller Hilberträume $\hil_n$ mit $N=0,1,2,\dots$
+\begin{eqnarray*}
+\mathscr F = {\oplus}  _{N = 0}^\infty \hil_N\qquad \text{Fockraum}
+\end{eqnarray*}
+Die Besetzungszahlbasis ohne Einschränkung ($\sum \limits_i n_i = N$) ist eine VONB im Fockraum, d.h. es gilt
+\begin{eqnarray*}
+\sum \limits _{n_1 = 0}^{1 (\infty)} \sum \limits _{n_2 = 0}^{1 (\infty)}\dots \s n_1,n_2,\dots\big >\big<n_1,n_2,\dots\s=\mathds 1\qquad\text{für  Fermionen (Bosonen).}
+\end{eqnarray*}
+$\hil_0$  enthält einen Zustand ohne Teilchen.\\
+$\longrightarrow$ Vakuumszustand $\s 0 \big > = \s 0,0,\dots\big >$    \Big($\lo0\s0\ro = 1$\Big)
+
+
+

@@ -1,0 +1,117 @@
+\subsection{Quantisierung des Strahlungsfeldes}
+\subsubsection{Normalmoden, Photonen}
+Lagrangefunktion des freien Feldes
+\begin{eqnarray*}\Lr \g -\frac 1 {4\mu_0} F_{\mu\nu}F^{\mu\nu}\qquad\qquad F^{\mu\nu} = \partial^{\mu}A^{\nu}- \partial^{\nu}A^{\mu}\\
+\g \frac 1 {2 \mu_0}\left(\frac 1 {c^2}\vec E^2 - \vec B^2\ri) = \frac 1 {2 \mu_0}\left(\frac 1 {c^2}\dot{\vec A}^2- (\rot\vec A)^2 \ri)
+\end{eqnarray*}
+Die Coulombeichung $\dell_i A^i = 0$ kann durch $A^0=0$ gelöst werden. Es ergibt sich folgende Hamiltonfunktion: 
+\begin{eqnarray*}
+\ham \g -\frac{\partial \Lr}{\partial \dot A^i}\dot A^i-\Lr =\frac 1 {2\mu_0}\left(\frac 1 {c^2}\vec E^2+\vec B^2\ri)
+\end{eqnarray*}
+Freie Lösungen bestimmt durch Wellengleichung
+\begin{eqnarray*}
+	\Box \vec A = 0\qquad (\text{ mit }\divergenz \vec A = 0) 
+\end{eqnarray*}
+Allgemeine Lösung: Zerlegung nach Normalmoden
+\begin{eqnarray*}
+A^\mu \g \sum \limits_{\vec k,\lambda=1 ,2} \frac 1 {\sqrt{2 |\vec k|V}}\left(e^{-ikx} \varepsilon ^\mu_{\vec k,\lambda} a_{\vec k,\lambda} + e^{ikx}\varepsilon^{\mu *}_{\vec k,\lambda} a^\dagger_{\vec k,\lambda}\ri)\\
+\text{mit }&{}&k_0 = |\vec k|\qquad \vec k\vec \varepsilon_{\vec k,\lambda} = 0\qquad \varepsilon^0_{\vec k,\lambda} = 0\\
+&{}&\vec \varepsilon_{\vec k,\lambda} \cdot \vec\varepsilon_{k,\lambda'} = \delta_{\lambda,\lambda'}
+\end{eqnarray*}
+Wir quantisieren:\\
+$a_{\vec k\lambda}$ vernichtet Photon mit $\vec k, \lambda$\\
+$a_{\vec k\lambda}^\dagger$ erzeugt Photon mit $\vec k, \lambda$\\ \\
+Hamiltonoperator:
+\begin{eqnarray*}
+H = \int d^3 r\ham = \dots = \sum_{\vec k, \lambda} \frac{c\hbar|\vec k|}2 \left(a^\dagger_{\vec k \lambda}a_{\vec k \lambda}+a_{\vec k \lambda}a_{\vec k \lambda}^\dagger \ri)
+\end{eqnarray*}
+Mit bosonischen Vertauschungsrelationen gilt: $aa^\dagger = 1 + a^\dagger a $ und damit
+\begin{eqnarray*} 
+	H = \sum \limits_{\vec k \lambda}\hbar \omega_{\vec k}\left(a_{\vec k \lambda}^\dagger a_{\vec k \lambda}+\frac 1 2\ri)
+\end{eqnarray*}
+Das elektromagnetische Feld ist in quantisierter Form äquivalent zu Normalmoden harmonischer Oszillatoren (die Amplitude entspricht gerade den Feldern).
+
+\subsubsection{Feldoperatoren}
+\begin{eqnarray*}
+	A^{\mu}_{\lambda k}(x)&=& \varepsilon_{\lambda}^{\mu} \phi_{\vec{k}}(x) \left( e^{-i\omega t} a_{k\lambda} +e^{i\omega t} a^\dagger_{k\lambda} \right)
+\\
+\Rightarrow \vec E &=& -\dot{\vec A} = -i\omega \varepsilon_{\lambda}\phi_k(x) \left( e^{-i\omega t} a_{k\lambda} +e^{i\omega t} a^\dagger_{k\lambda} \right)
+\end{eqnarray*}
+\begin{itemize}
+\item Feldoperatoren sind hermitesch $\vec E^\dagger = \vec E, \ \vec A^\dagger = \vec A$ und sind daher physikalische Observablen und müssen somit Erzeuger $a^\dagger$ und Vernichter $a$ enthalten.
+\begin{eqnarray*}
+\left [E^i(\vec r, t),E^j(\vec r',t)\ri] \g 0\\
+\left[E^i(\vec r, t), B^j(\vec r, t)\ri] \g i\varepsilon_{ijk}\partial_k\delta(\vec r-\vec r')
+\end{eqnarray*}
+\item Damit verhalten sich die Feldoperatoren $\vec{E}$ und $\vec{B}$ wie Impuls und Amplitude eines quantenmechanischen harmonischen Oszillators. 
+\item Die Fockzustände $\ket{n}$ sind keine Eigenzustände von $\vec{E}$ und $\vec{B}$ und es gibt Fluktuationen (Unschärfen) selbst im Vakuum: 
+\begin{eqnarray*}
+	\bracket{0}{(\hat a+\hat a^\dagger)}{0}&=&0
+	\\
+	\bracket{0}{(\hat a+\hat a^\dagger)}{0}&\neq&0
+\end{eqnarray*}
+\end{itemize}
+
+
+\subsubsection{Strahlungsübergänge, QED}
+Die Kopplung vom elektromagnetischen Feld an Elektronen erfolgt nach dem Prinzip der minimalen Kopplung wie folgt: 
+\begin{eqnarray*}
+&& \vec p \to \vec p-e\vec A
+\\
+\Rightarrow& \wh\ham =& \wh\ham_{el} + \wh\ham_{el-ph} + \wh\ham_{ph}
+\\
+&=& \sum_\sigma \int \mathrm{d}^3r \; \hat{\Psi}_\sigma^\dagger(\vec r) \left(\frac{1}{2m} \left(\hat{\vec{p}}-e\hat{\vec A}(\vec r)\ri)^2 + e\phi(\vec r)\ri) \hat{\Phi}_\sigma(\vec r) + H_{ph}(\hat{\vec{A}})
+\\
+& \wh\ham_{ph} =& \sum_{\vec k \lambda}\hbar \omega_{\vec k} \hat{a}^\dagger_{\vec k \lambda}\hat{a}_{\vec k \lambda}
+\\
+& \wh\ham_{el-ph} =& -\frac 1 m \sum_\sigma \int\mathrm{d}^3 r\; \hat{ \Psi}_\sigma^\dagger(\vec r) \hat{\vec A}(\vec{r})\hat{\vec{p}} \hat{\Psi}_\sigma(\vec{r}) + \mathcal{O}(\vec A^2)
+\end{eqnarray*}
+Strahlungsübergänge folgen in zeitabhängiger Störungstheorie in $\wh\ham_{el-ph}$.
+\begin{eqnarray*}
+\Gamma_{i-f} = \frac{2 \pi}\hbar \delta(E_f-E_i) |\bra{f}\wh\ham_{el-ph}\ket{i}|^2
+\end{eqnarray*}
+Hierbei ist $\ket{i/f}=\ket{\psi_{i/f}}_{el}\otimes \ket{\psi_{i/f}}_{ph}$, das heißt es müssen Übergänge der Elektronen und Photonen beachtet werden.
+
+Im klassischen Fall ergibt sich nach Fermis Goldener-Regel (Kapitel 1.2) die Übergangsrate $\Gamma=\dot{P}_{if}$ zu: 
+\begin{eqnarray*}
+\Gamma^{\text{abs / em}}\propto |\vec{E}_{\omega}|^2\delta(\varepsilon_f-\varepsilon_i \pm \hbar \omega)\end{eqnarray*}
+Wobei $|\vec E_{\omega}|^2\propto n_{\omega}$ die Feldenergie ist, welche der Besetzung entspricht. 
+
+In der Quanten Elektro Dynamik ergibt sich die Übergangsrate hingegen wie folgt: 
+\begin{eqnarray*}
+\bracket{\psi_i}{ (\hat{a}+\hat{a}^\dagger)}{\psi_f} &=&  \bracket{n\pm1}{(\hat{a}+\hat{a}^\dagger)}{n} = \bra{n\pm1}\big(\sqrt{n} \ket{n-1}+ \sqrt{n+1} \ket{n+1}\big)
+\\
+&=& \Bigg \{ \begin{array}{llc} \sqrt{n} & \text{für Absorption} & (-) \\ \sqrt{n+1} & \text{für Emission}& (+) \end{array}
+\\
+\Rightarrow\quad \Gamma &\propto& \Bigg \{ \begin{array}{ll} n &\text{für Absorption}\\ n+1 &\text{für stimulierte und spontane Emission }\end{array}
+\end{eqnarray*}
+\begin{itemize}
+\item Absorption und stimulierte Emission ergeben klassische Raten $\propto n\propto |\vec{E}|^2$
+\item Spontane Emission ($n=0$) ins Vakuum erfolgt ohne äußeres Feld, verursacht durch sogenannte \underline{Vakuumsfluktuation} und ist eine reine Folgerung aus der QED. 
+\end{itemize}
+
+
+\subsubsection{Der Casimir-Effekt}
+Bisher haben wir die Vakuumenergie vernachlässigt, weil sie nicht beobachtbar ist. Vakuumsfluktuationen der Feldamplituden sind aber nach der QED vorhanden.
+
+Dies Vakuumenergie hängt von den Randbedingungen ab. Damit sollte sie messbar sein. Wir betrachten als Beispiel zwei leitende Platten im Abstand $a$. Die Moden sind dann gegeben als: 
+\begin{eqnarray*}
+\omega(\vec k_\parallel , n) = c \sqrt{|k_\parallel|^2 + \left(\frac{\pi n }a\ri)^2}\qquad n = 1,2,\dots
+\end{eqnarray*}
+Wegen der Randbedingungen sei $E_\perp = 0$ auf den Platten. Damit ergibt sich eine unterschiedliche Energie im Vakuumzustand mit Platten $E$ und ohne die Platten $E_0$: 
+\begin{eqnarray*}
+E = \sum_{\vec k \lambda}\frac 1 2 \hbar \omega_{\vec k} = \frac\hbar 2 \int \frac{L^2 \mathrm{d}^2k_\parallel}{(2\pi)^2} \sum_{n=1}^\infty 2 \omega ( \vec k_\parallel,n) &\quad& E_0 = \frac{\hbar c}2 \int \frac{L^2 \mathrm{d}^2k_\parallel}{(2 \pi)^2} \int_0^\infty \mathrm{d}n \omega(\vec k_\parallel, n)
+\end{eqnarray*}
+Die Energie pro Fläche $\varepsilon$ und die Kraft pro Fläche $F/L^2$ ergeben sich damit zu: 
+\begin{eqnarray*}
+\varepsilon &=& \frac{E-E_0}{L^2} = \dots = - \frac{\pi^2}{720}\frac{\hbar c}{a^3}
+\\
+\frac F{L^2} &=& - \frac{\partial \varepsilon}{\partial a} = - \frac{\pi^2}{240}\frac{\hbar c}{a^4}
+\end{eqnarray*}
+Dieser Effekt wird als Casimir-Effekt bezeichnet. Folgende Anmerkungen 
+\begin{itemize}
+\item Die anziehende Kraft ist sehr klein, für $L=\unit{1}{\meter}$ und $a=\unit{1}{\micro\meter}$ ergibt sich beispielsweise zu $F\approx \unit{10^2}{\newton}$. 
+\item Die Kraft hängt nur von Naturkonstanten und vom Abstand ab, aber nicht vom Material.
+\item Der Effekt kann kann auf andere Geometrien, beispielsweise Kugeln, erweitert werden und hängt von der Temperatur ab. 
+\item Der Effekt ist ähnlich der Betrachtung von van-der-Waals-Kraft zwischen nicht fluktuierenden Dipolen in Molekülen oder Atomen. 
+\end{itemize}

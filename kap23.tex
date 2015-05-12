@@ -1,0 +1,222 @@
+\subsection{Lagrangeformalismus}
+\subsubsection{Mechanik eines freien Teilchens}
+Die Wirkung ist $S = \int \Lr(q,\dot q,t)dt$.\\
+\underline{Problem:} $dt$ ist nicht kovariant.\\
+\underline{Lösung:} Wir führen die Eigenzeit $d\tau = \frac{dt}{\gamma}$ ein.
+\begin{eqnarray*} \longrightarrow S_{\text{frei}} =\int \gamma \Lr_{\text {frei}}d\tau \end{eqnarray*}
+Damit das Prinzip der kleinsten Wirkung gilt, muss $S$ (und damit $\delta S = 0$) ein Skalar sein! Da ein freies Teilchen orts- und richtungsunabhängig ist, ist der einzige geschwindigkeitsabhängige Skalar der Geschwindigkeitsbetrag:
+\begin{eqnarray*} \text{mit  } u_{\mu}u^{\mu} = c^2\\ \Longrightarrow S \g - \int mc^2d\tau \\
+\text{bzw. } S \g \int - \underbrace{m c^2 \sqrt{1 - \frac{\vec v ^2}{c^2}}}_{\Lr_{\text{frei}}=\sqrt{u_{\mu}u^{\mu}}mc}dt\end{eqnarray*}
+Beachte: $u_{\mu}u^{\mu}$ darf erst nach Variation verwendet werden, da $u^0(\tau)=\frac{\text{d}t}{\text{d}\tau}$ erst als unabh‰ngige Funktion ausgerechnet werden muss.
+Dies ergibt:
+\begin{eqnarray*}
+\frac d{dt} \frac{\partial \Lr}{\partial v_i} = \frac d {dt} m \gamma \vec v = 0 \qquad \widehat = \text{ konst. Geschwindigkeit}\end{eqnarray*}
+\subsubsection{Mechanik mit elektromagnetischem Feld}
+\begin{eqnarray*} \Lr = \Lr_{\text{frei}} + \Lr_{\text{int}} \qquad \text{mit  }\gamma\Lr \wh = \text{  Skalar}\end{eqnarray*}
+Forderungen an $\Lr_{\text{int}}$ (neben der Kovarianz)
+\begin{itemize}
+\item Linear in der Ladung $q$
+\item Linear in dem Potential $A^{\mu}$
+\item Translationsinvariant ( explizit unabhängig von $x^{\mu}$ )
+\item Möglichst Funktionen 1. Ableitung
+\end{itemize}
+\begin{eqnarray*}\longrightarrow \Lr_{\text{int}} \g - q u_{\mu} \frac{A^{\mu}}{\gamma} \\
+\g - q \phi + q \vec v\vec A\\
+\end{eqnarray*}
+\begin{eqnarray*}
+\Longrightarrow \boxed{ \Lr = -mc^2 \sqrt{1 - \frac{\vec v^2}{c^2}} + q \vec v\vec A - q \phi}
+\end{eqnarray*}
+\underline{Kanonische Impulse:}
+\begin{eqnarray*}
+\vec p_{\text{kan}} = \frac{\partial \Lr}{\partial \vec v} = m\gamma\vec v + q \vec A\\
+\Longrightarrow \vec v = c ^2\frac{\vec p - q \vec A}{\sqrt{m^2c^4 + c^2(\vec p - q\vec A)^2}}
+\end{eqnarray*}
+\underline{Hamiltonfunktion:}
+\begin{eqnarray*}
+\ham = \sqrt{m^2c^4 + c^2(\vec p-q\vec A)^2} + e\phi \end{eqnarray*}
+\underline{Bemerkung:} \babsatz Der Hamiltonformalismus kann nicht mehr mit der Energie identifiziert werden, da die Hamiltonfunktion nun ein Lorentzskalar ist und die Energie die Zeit-Komponente eines Vierervektors sein sollte.\eabsatz \vspace{0.5cm}
+
+\underline{Kovariante Form der Lagrangefunktion}\\
+Mit Hilfe der Vierer-Geschwindigkeit 
+\begin{eqnarray*}
+\sqrt{1 - \frac{\vec v^ 2}{c^ 2}} = \frac 1 { \gamma} \frac{u_{\mu} u^ {\mu}}{c^2}
+\end{eqnarray*}
+und der Eigenzeit $d\tau = \gamma dt$ lässt sich die Wirkung umschreiben:
+\begin{eqnarray*}
+S_{\text {frei}} = -mc \int \sqrt{u_{\mu}u^ {\mu }} d\tau\\
+\text{mit Zwangsbedingung}\qquad u_{\mu}u^ {\mu} = c^ 2\\
+\Longrightarrow \quad S_{\text{frei}} = \text{ const.}
+\end{eqnarray*}
+Ausweg: \babsatz  Wir führen ein Bahnparameter ($s$) ein, der \underline{nach} der Variation nach $ds = cd\tau$ mit der Eigenzeit identifiziert wird.\\
+(D.h. $ \frac{dx^ {\mu}}{ds}\frac {dx_{\mu} }{ds} \neq 1$.)\eabsatz
+\begin{eqnarray*}
+\Longrightarrow S_{\text{frei}} = -mc \int \sqrt{g_{\mu\nu}\frac{dx^ {\mu}}{ds} \frac{dx^{\nu} }{ds} }ds\\
+\text{Für die Ww. Mit dem e.m-Feld gilt:}\\
+S_{\text{int}} = - q \int \frac{dx^ {\mu}}{ds} A_{\mu}(x) ds
+\end{eqnarray*}
+die Variation von $S_{\text{frei}} + S_{\text{int}}$ mit $ds = cd\tau$ und $u_{\mu}u^ {\mu} = c^ 2$ ergibt:
+\begin{eqnarray*}
+\Longrightarrow&{}& m \frac{d^ 2x^ {\mu}}{d\tau^ 2} + q
+\underbrace{\frac{dA^ {\mu}}{d\tau}}_{=
+  \frac{dx_{\nu}}{d\tau}\partial^ {\nu}A^ {\mu}} - q\frac{dx_{\nu}}{d\tau} \partial^ {\mu} A^ {\nu} = 0\\ 
+\text{mit }&{}& \quad \big ( \partial^  {\nu}A^ {\mu} - \partial^ {\mu}A^ {\nu}\big ) = F^ {\nu\mu}\\
+\g m \frac{d^ 2x^ {\mu}}{d\tau^ 2} + q \frac{dx_{\nu}}{d \tau} F^ {\nu\mu} = 0
+\end{eqnarray*}
+\subsubsection{Felder}
+Behandlung von Feldern im Lagrangeformalismus: Fasse die Felder $\phi_k(x)$ als ,,k-te Koordinate eines Freiheitsgrades bei $x^\mu$ auf. Hierbei ist $x$ der Viererortsvektor.\\
+In 4-Dimensionen ergibt dies:
+
+
+
+\begin{center}
+\begin{tabular}{ccc|c}
+ & &Hier&Klassisch\\
+Kontinuierlicher Index/Indizes&$\longrightarrow$&$x^ {\mu}$&$t$\\
+Auslenkung&$\longrightarrow$&$\phi_k(x)$&$x(t)$\\
+Geschwindigkeit&$\longrightarrow$&$\partial^ {\mu}\phi_k(x)$&$\partial_t x(t)$
+\end{tabular}
+\end{center}
+
+Die Wirkung ist
+\begin{eqnarray*}
+S = \int d^ 4x \Lr\big(\phi_k,\partial ^ {\mu}\phi_k\big)
+\end{eqnarray*}
+Die Euler-Lagrangegleichung ergibt sich zu:
+\begin{eqnarray*}
+\partial^ {\mu} \frac{\partial \Lr}{\partial ( \partial^ {\mu}\phi_k)} - \frac{\partial \Lr}{\partial \phi_k} = 0
+\end{eqnarray*}
+\begin{itemize}
+\item $k$ partielle Differentialgleichungen für $\phi_k(x)$.
+\item $\Lr \wh =$Lagrangedichte.
+\item $dx^ 4$ ist ein Lorentzskalar $\longrightarrow$ $\Lr$ muss ebenfalls ein Lorentzskalar sein.
+\end{itemize}
+Anwendung auf die Elektrodynamik:
+\begin{itemize}
+\item Freie Felder (Felder ohne Quellen) betrachten vier Potentiale ($A^ {\mu}$)\\
+$\longrightarrow \ \Lr$ hängt nur von den Ableitungen ab.
+\item Die Kopplung an der Materie ist linear in $A^ {\mu}$.
+\end{itemize}
+Ansatz:
+\begin{eqnarray*} \boxed{ \Lr = \frac {-1}{4\mu_0} F_{\mu\nu}F^ {\mu\nu} - j_{\mu} A^ {\mu}}\end{eqnarray*}
+Es gilt die Euler-Lagrangegleichung:
+\begin{eqnarray*} \frac{\partial \Lr}{\partial A^ {\mu}}\g - j_{\mu}\\
+\rightarrow -4\mu_0 \frac{\partial \Lr}{\partial\big ( \partial^ {\nu}A^{\mu}\big)} \g \frac{\partial}{\partial \big(\partial^ {\nu}A^{ \mu}\big)} g_{\alpha\beta}g_{\gamma\delta}F^ {\alpha\gamma}F^{\beta\delta}\\
+\g g_{\alpha\beta}g_{\gamma\delta}\frac{\partial}{\partial\big(\partial^{\nu}A^{\mu}\big)} \Bigg[\Big( \underbrace{\partial^{\alpha}A^{\gamma}-\partial^{\gamma}A^{\alpha}}_{=F^{\alpha\gamma}}\Big)\Big(\underbrace{\partial^ {\beta}A^ {\delta}-\partial^ { \delta}A^ {\beta}}_{=F^{\beta\delta}}\Big)\Bigg]\\
+\text{mit } \frac{\partial \big (\partial^ {\alpha}A^ {\gamma}\big )}{\partial\big(\partial^ {\nu}A^ {\mu}\big )} = \delta_{\nu}^ {\alpha}\delta_{\mu}^ {\gamma}\\
+\g g_{\alpha\beta}g_{\gamma\delta} \Bigg[\Big(\delta_{\nu}^ {\alpha}\delta_{\mu}^ {\gamma}-\delta_{\nu}^ {\gamma}\delta_{\mu}^ {\alpha}\Big) F^ {\beta\delta} + \Big(\delta_{\nu}^ {\delta}\delta_{\mu}^ {\delta} - \delta_{\nu}^ {\delta}\delta_{\mu}^ {\beta}\Big )F^ {\alpha\gamma} \Bigg]\\
+\g F_{\nu\mu}-F_{\mu\nu}+F_{\nu\mu}-F_{\mu\nu} = 4 F_{\nu\mu}\\
+\Longrightarrow &{}& \boxed{\partial^ {\mu}F_{\mu\nu} = \mu_0 j_{\nu}}
+\end{eqnarray*}
+Die obige Gleichung ist die inhomogene Maxwellgleichung.\\
+Die homogenen Maxwellgleichungen sind durch den Ansatz $F^ {\mu\nu} = \partial^ {\mu}A^ {\nu}-\partial^ {\nu}A^ {\mu}$ automatisch erfüllt.\\
+Es gilt ebenfalls:
+\begin{eqnarray*}
+\underbrace{\partial^{\nu}\partial^{\mu}F_{\mu\nu}}_{\partial^ {\nu}\partial^ {\mu}=\partial^ {\mu}\partial^ {\nu} \text{ aber }F^ {\mu\nu}= -F^ {\nu\mu}} = -\mu_0\partial^ {\nu}j_{\nu}
+\end{eqnarray*}
+$\Longrightarrow \partial^ {\nu} j_{\nu} = 0$ Die Kontinuitätsgleichung ist erfüllt.\\
+
+
+\subsubsection{Felder und Teilchen}
+Für ein Teilchen $i$ mit \{$x_{(i)}^{\mu}(\tau)$\} und Felder $F^ {\mu\nu}(x^ {\mu})$ gibt es eine Lagrangefunktion mit dem Wechselwirkungsterm
+\begin{eqnarray*} \int ds \ q \frac{dx^ {\mu}} {d s}\ A_{\mu}\left(x(s)\ri) \leftrightarrow \int d^4x \ j_{\mu}(x)A^ {\mu}(x).\end{eqnarray*}
+Die Stromdichte für ein Teilchen ist
+\begin{eqnarray*} j^ {\mu}(x) = \sum_i\int ds \ q_i \frac{dx^ {\mu}}{d s}\delta^ {(4)}(x-x_i(s)). \end{eqnarray*}
+Einsetzen ergibt den obigen Wechselwirkungsterm, wobei $s$ mit $\tau$ identifiziert werden kann.
+Ebenso ist die Lagrangefunktion für ein freies Teilchen
+\begin{eqnarray*}
+\Lr_{\text{frei}}\left( \frac{dx}{ds}\ri) = \int d^ 4x' \Lr \left( \frac{dx'}{ds}\ri )\delta^ {(4)}(x'-x(s)).\end{eqnarray*}
+Die gesamte relativistische Mechanik und Elektrodynamik ist bestimmt durch:
+\begin{eqnarray*}
+S \g \int d^4x \ \Lr \left ( \Big\{x_i, \partial^{\mu}x_i\Big \} ,A^{\mu}(x),\partial^{\mu} A^{\nu}(x) \ri )\\
+\Lr \g \sum \limits_i - m_ic \int d\tau \delta^{(4)}(x-x_i(\tau))\sqrt{u_{i}^{\mu}u_{i\;\mu}}\\ &{}& - \sum\limits_i q_i \int d\tau \frac{dx_{i}^{\mu}(\tau)}{d\tau} \delta^{(4)}\big(x-x_{i}(\tau)\big)A_{\mu}(x) \\&{}& -\frac 1 {4 \mu_0}F_{\mu\nu}F^{\mu\nu}
+\end{eqnarray*}
+\begin{itemize}
+\item Variation von $S$ nach $x_i(s_i)$ und $A_{\mu}(x)$ ergibt die Bewegungsgleichung der Teilchen und die Maxwellgleichungen.
+\item Die Beschreibung der effektiven Wechselwirkung zwischen den Teilchen wird nicht einfach sein, da die Potentiale von dem Ort der Teilchen zu retardierten Zeiten abhängen. $\longrightarrow$ nicht instantane Wechselwirkung.
+\item In niedrigster relativistischer Ordnung $\longrightarrow$ Darwin Terme (siehe Übung).
+\end{itemize}
+\subsubsection{Energie-Impuls- oder Spannungstensor}
+Für eine allgemeine Feldtheorie gilt:
+\begin{eqnarray*}
+\Lr(\varphi,\partial^{\mu}\varphi).
+\end{eqnarray*}
+$\Lr$ ist die {\bf Lagrangedichte} und ist explizit unabhängig von $x^{\mu}$.\\
+Die Euler-Lagrangegleichung ist somit:
+\begin{eqnarray*}
+\partial_{\mu} \frac{\partial \Lr}{\partial(\partial_{\mu} \varphi)} - \frac{\partial \Lr}{\partial \varphi} = 0
+\end{eqnarray*}
+Wir betrachten die Erhaltungsgrößen:
+\begin{eqnarray*}\nonumber
+\partial _{\mu} \Lr \g \big(\partial _{\mu}\varphi\big) \frac{\partial \Lr}{\partial \varphi} + \big(\partial_{\mu}\partial_{\nu}\varphi\big) \frac{\partial \Lr}{\partial(\partial_{\nu} \varphi)}\\ \nonumber
+\text{mit } &{}&\quad \partial_{\nu} \frac{\partial \Lr}{\partial(\partial_{\nu}\varphi)} = \frac{ \partial \Lr}{\partial \varphi}\quad \text{Euler-Lagrange}\\ \nonumber
+\longrightarrow 0 \g \partial_{ \nu } \underbrace{\left((\partial _{\mu}\varphi)\frac{\partial \Lr}{\partial(\partial_{\nu} \varphi)}\ri)}_{T_{\ \ \mu}^{\nu}- \delta_{\mu}^{\ \ \nu}}\\ \label{eq:4}
+\Longrightarrow &{}&\boxed{\partial_{\nu} T_{\ \ \mu}^{\nu} = 0}
+\end{eqnarray*}
+$T_{\ \ \mu}^{\nu}$ ist somit eine kovariante Erhaltungsgröße analog zur Energie-Impulserhaltung in der klassischen Mechanik.\vspace{1.5cm}
+
+
+
+\underline{Physikalische Bedeutung von  $T^ {\mu\nu}$}\\ \\
+Die Erhaltung ist eine Folge der Translationsinvarianz (unabhängig von $x^ {\mu}$) und gilt zu allen Zeiten und im ganzen Raum.
+\begin{eqnarray*}
+T^ {00} = \dot \varphi \frac{\partial \Lr}{\partial \dot \varphi} - \Lr
+\end{eqnarray*}
+Diese Gleichung entspricht genau der {\bf Energiedichte} $W$ des Feldes (analog einer Hamiltondichte).\\
+Aus der Ableitung Gleichung (\ref{eq:4}) folgt:
+\begin{eqnarray*}
+\partial_{\nu} T^ {\nu 0} = \frac 1 c  \partial_t T^ {00} + \partial_iT^ {i0} = 0
+\end{eqnarray*}
+Dies ist die Kontinuitätsgleichung für die Energiedichte.
+\begin{eqnarray*} \Longrightarrow T^ {i 0 } = \frac 1 c S^i \qquad \qquad \wh = \text{     \bf Energiestromdichte}\end{eqnarray*}
+Integriere Gleichung (\ref{eq:4}) über das 3 dimensionale Volumen:
+\begin{eqnarray*} \partial_0 \int T^ {0\mu}d^ 3x + \underbrace{\int \partial_k T^ {k\mu}d^3x}_{= 0,\ \ \  *}= 0\\
+\Longrightarrow P^ {\mu} = \int T^ {0\mu}d^ 3x \end{eqnarray*}
+ist zeitlich erhalten und entspricht dem Viererimpuls des Feldes.\\
+Zu $*$) Diese Beziehung gilt nur für lokalisierte Felder, hier ist nur ein endlicher Raum betroffen und der Satz von Gauss ist über das Volumen des Raumes anwendbar.\\ \\
+\underline{Achtung:} \babsatz $T^ {\mu\nu}$ ist i.Allg. nicht symmetrisch definiert.\\
+Kann aber symmetrisiert werden, ohne dass sich die Erhaltungssätze ändern.\\
+$\longrightarrow$ Die symmetrische Wahl wird wegen der Drehinvarianz bevorzugt.\eabsatz
+Die weiteren Komponenten werden in der {\bf Impulsstromdichte} $T^ {ik}$ zusammengefasst:\\
+z.B.
+\begin{eqnarray*}\label{eq:6} \frac 1 c\frac{\partial}{\partial t} T^ {i 0} + \frac {\partial}{\partial x^ j}T^ {i j} = 0 \end{eqnarray*}
+Die Gleichung (\ref{eq:6}) hat die Form der Kontinuitätsgleichung einer Impulsdichte $T^ {i 0}$\\
+,,Anschaulich'' : BILD\\
+Konkret : Energie-Impuls-Tensor (symmetrisiert).
+\begin{eqnarray*}
+T^ {\mu\nu} = \left ( \begin{array}{cccc} W & \frac{S_x}{c}&\frac{S_y}c&\frac{S_z}c\\
+\frac{S_x}c&T_{xx}&T_{xy}&T_{xz}\\ \frac{S_y}c&T_{xy}&T_{yy}&T_{yz}\\
+\frac{S_z}c&T_{xz}&T_{yz}&T_{zz} \end{array} \ri)
+\end{eqnarray*}
+
+\subsubsection{Energie-Impuls-Tensor des elektromagnetischen Feldes}
+\begin{eqnarray*} 
+\Lr \g \frac {- 1} {4\mu_0} F_{\mu\nu}F^ {\mu\nu} \qquad \text{mit} F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}\\
+T^ {\mu\nu } \g \frac{\partial A_{\kappa}}{\partial x_{\mu }} \cdot \frac{\partial \Lr}{\partial \big(\frac{\partial A_{\kappa}}{\partial x_{\nu}}\big )} - g^ {\mu\nu} \Lr\\
+\g - \frac 1 {\mu_0} \big(\partial^ {\mu}A^ {\kappa}\big)F^ {\nu}_{\ \ \kappa} + \frac 1 {4 \mu_0}g^ {\mu\nu}F_{\kappa\lambda}F^ {\kappa\lambda}
+\end{eqnarray*}
+Wir symmetrisieren durch die Addition von $\frac 1 {\mu_0} \big( \partial^\mu A^\kappa\big ) F^\mu_{\ \ \kappa}$. (Dies ist möglich, da $\partial_{\mu}F^ {\mu}_{\ \ \kappa} = 0$, wenn keine Ladungen existieren.)
+\begin{eqnarray*}
+\Longrightarrow \boxed{T^ {\mu\nu} = -\frac1 {\mu_0}g_{\kappa \lambda }F^ {\mu\kappa}F^{\lambda \nu} + \frac 1 {4 \mu_0} g^ {\mu\nu}F_{\kappa\lambda}F^ {\kappa\lambda} }\end{eqnarray*}
+Eigenschaften von $T^ {\mu\nu}$:
+\begin{itemize}
+\item symmetrisch $T^{\mu \nu} = T^{\nu\mu}$
+\item spurfrei $T_{\mu}^ {\mu}= 0$
+\end{itemize}
+Die Komponenten ergeben sich zu
+\begin{eqnarray*}
+T^ {00} \g \frac 1 {2\mu_0} \Big ( \frac 1 {c^ 2} \vec E ^ 2 + \vec B ^ 2\Big) = \frac{\varepsilon_0}2 \vec E + \frac 1 {2 \mu_0} \vec B ^ 2\\ &{}& \quad \longrightarrow \text{\bf Energiedichte}\\
+T^{i0}=T^ {0i} \g + \frac 1 {\mu_0 c} \big ( \vec E\times \vec B) _i \\
+&{}& \quad  \wh = \text{\bf Poyntingvektor}\\
+T^ {ij} \g -\varepsilon_0  E_iE_j - \frac 1 {\mu_0}B_iB_j + \frac{\delta_{ij}}2 T^ {00} \\  &{}& \quad  \longrightarrow\text{\bf negativer Maxwellscher Spannungstensor}
+\end{eqnarray*}
+Die Berücksichtigung von Ladungen ( $=$ Quellen des elektromagnetischen Feldes) führt auf gemeinsame Erhaltungssätze:\\
+z.B.:
+\begin{eqnarray*} \frac d{dt} \Big( P^{\mu}_{\text{Feld}} + P_{\text{Teilchen}}^ {\mu}\Big ) \g 0\\
+\text{mit } P^ {\mu}_{\text{Teilchen}} = \sum  \limits_i p_{(i)}^ {\mu} &\wh=& \text {gesamter 4er-Impuls aller Teilchen}
+\end{eqnarray*}
+
+
+äää Local Variables: 
+äää mode: latex
+äää TeX-master: "main"
+äää End: 

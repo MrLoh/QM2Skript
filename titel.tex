@@ -1,0 +1,26 @@
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}{\fancyhf{}
+\fancyhead[LO,RE]{\footnotesize \rightmark}
+\fancyfoot[C]{\footnotesize -$\,$\thepage$\;$-}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{plain}{\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{\footnotesize -$\,$\thepage$\,$-}}
+
+\usepackage{titlesec}
+\titleformat{\section}[display]{\sffamily\bfseries\Huge\center}{Kapitel \thetitle:}{1ex}{}{}
+\newcommand{\kapitel}[2]{$\;$\vspace{-1.5cm} \section[#1]{#2} \rule{17cm}{0.4pt}\vspace{3cm}}
+\titleformat{\paragraph}[hang]{\sffamily\bfseries}{\thetitle:}{0ex}{\vspace{-0.15cm}}{\vspace{0.5cm}}
+
+\title{ \vspace{1.5cm}\includegraphics[width=5cm]{logo}
+\\ \Large Universität Konstanz  \\ \vspace{4ex} \huge 
+Skript zur Vorlesung\\ Höhere Quantentheorie und Elektrodynamik
+\\ \vspace{4ex} \Large Prof. Dr. Wolfgang Belzig 
+\\ Version vom 30. Juli 2012 \\ \vspace{4.5cm}
+\normalsize Ursprünglichen Mitschrift von Birte Heinze im WS 09/10 \\ Ausführliche Überarbeitung von Tobias Lohse im WS 11/12 \vspace{-10cm}}
+\author{}
+\date{}

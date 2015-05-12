@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt,final,twoside]{scrartcl}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{5}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\linespread{1.4}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{mathbbol}
+\usepackage{amsmath1}
+\usepackage[ngerman]{babel}
+\usepackage{bibgerm}
+\usepackage[pdftex]{graphicx}
+%\usepackage{mathpazo}
+\usepackage{floatflt}
+%%\usepackage{epsfig}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{caption} 
+\usepackage{multicol} 
+\usepackage{mathrsfs}
+%\usepackage{pspicture}
+%\usepackage{eepic}
+%\usepackage{epic}
+%\usepackage{trfsigns}
+
+%\usepackage[ansinew]{inputenc}
+\usepackage{longtable,array,dcolumn}
+%\usepackage{ngerman}
+\usepackage{epic}
+\usepackage{rotate}
+\usepackage{graphpap}
+\usepackage{amssymb}
+\usepackage[squaren]{SIunits}
+\usepackage{curves}
+\usepackage{float}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{marvosym}
+\usepackage{slashed}%für feynmanslsash
+\usepackage[breaklinks,pdfborder={0 0 0}]{hyperref}
+\usepackage{ulem}	%angeblich funktioniert dann
+\let\underbar\uline	%underbar in math auch bei greek letters
+\usepackage{multirow}
+%\usepackage{multicolumn}
+\usepackage{enumitem}
+
+
+\setlength{\parskip}{12pt}
+\setlength{\parindent}{0mm}
+%\newcommand{\grad}{\ensuremath{^{\circ}}
+%\renewcommand{\figurename}{Abb.}		% mit usepackage caption2
+%\renewcommand{\captionfont}{\small \itshape}	% mit usepackage caption2
+%\setkomafont{caption}{\small \itshape}		%sollte mit caption im userpackage funktionieren
+%\setkomafont{captionlabel}{\small , \itshape}	%sollte mit caption im userpackage funktionieren
+\captionsetup{font = {small, sf}} %mit it anstelle von sf gibts kusiv
+
+\date{2009-20-10}
+\newcommand{\kreis}[1]{
+ \qbezier(-#1,0)(-#1,#1)(0,#1)
+  \qbezier(0,#1)(#1,#1)(#1,0)
+  \qbezier(#1,0)(#1,-#1)(0,-#1)
+  \qbezier(0,-#1)(-#1,-#1)(-#1,0)}
+\newcommand{\s}{\ \big| \ }
+\newcommand{\lo}{\left <}
+\newcommand{\ro}{\ri >}
+\newcommand{\g}{&=&}
+
+\newcommand{\ham}{\mathcal H}
+\newcommand{\hil}{\mathscr H}
+\newcommand{\fok}{\mathscr F}
+\newcommand{\wh}{\widehat}
+%\newcommand{\left}{\left}
+\newcommand{\ri}{\right}
+\newcommand{\Sp}{\text{Sp}}
+\newcommand{\babsatz}{\par \begingroup \leftskip=2cm}
+\newcommand{\eabsatz}{\par\endgroup}
+
+\newcommand{\D}{\text{\itshape D}}
+\newcommand{\Lr}{\mathcal L }%\textit{L}}
+\newcommand{\rot}{\text{rot}}
+\newcommand{\divergenz}{\text{div}}
+\newcommand{\grad}{\text{grad}}
+\newcommand{\grat}{${}^{\circ}$}
+%\newcommand{\tanh}{\text{tanh}} already defined
+
+\newcommand{\RM}[1]{\text{\MakeUppercase{\romannumeral #1}}}
+\newcommand{\dell}{\partial}
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\I}{\dot{\text{\i\!\i}}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ket}[1]{\mid\!\!\!\,\,{#1}\rangle}
+\newcommand{\bra}[1]{\langle{#1}\!\!\!\,\,\mid}
+\newcommand{\braket}[2]{\langle{#1}\!\!\!\,\,\mid\!\!\!\,\,{#2}\rangle}
+\newcommand{\bracket}[3]{\langle{#1}\!\!\!\,\,\mid\!\!\!\,\,{#2}\!\!\!\,\,\mid\!\!\!\,\,{#3}\rangle}
+\newcommand{\1}{\mathds{1}}
+\newcommand{\EW}[1]{\langle\!\!\,\,#1\!\!\,\,\rangle}
+\newcommand{\arrowbox}[1]{-\!\!\!\!\:\text{(#1)}\!\!\!\;\;\!\!\!\rightarrow}
+
+\newcommand{\ketI}[1]{\ket{#1}_{\!\!\;\text{I}}}
+\newcommand{\ketII}[1]{\ket{#1}_{\!\!\;\text{II}}}
+\newcommand{\ketIII}[1]{\ket{#1}_{\!\!\;\text{III}}}
+\newcommand{\braI}[1]{\,\!_{\text{I}\!\!\;}\bra{#1}}
+\newcommand{\braII}[1]{\,\!_{\text{II}\!\!\;}\bra{#1}}
+\newcommand{\braketI}[2]{\,_{\text{I}\!\!\;}\braket{#1}{#2}_{\!\!\;\text{I}}\,}
+\newcommand{\braketII}[2]{\,_{\text{II}\!\!\;}\braket{#1}{#2}_{\!\!\;\text{II}}\,}
+\newcommand{\braketIII}[2]{\,_{\text{III}\!\!\;}\braket{#1}{#2}_{\!\!\;\text{III}}\,}
+\newcommand{\bracketI}[3]{\,_{\text{I}\!\!\;}\bracket{#1}{#2}{#3}_{\!\!\;\text{I}}\,}
+\newcommand{\bracketII}[3]{\,_{\text{II}\!\!\;}\bracket{#1}{#2}{#3}_{\!\!\;\text{II}}\,}
+
+
+\newcommand{\up}{\ket{\uparrow}}
+\newcommand{\updg}{\bra{\uparrow}}
+\newcommand{\down}{\ket{\downarrow}}
+\newcommand{\downdg}{\bra{\downarrow}}
+\newcommand{\upup}{\ket{\uparrow\uparrow}}
+\newcommand{\updown}{\ket{\uparrow\downarrow}}
+\newcommand{\downup}{\ket{\downarrow\uparrow}}
+\newcommand{\downdown}{\ket{\downarrow\downarrow}}
+
+\newenvironment{itemize1}{\begin{itemize}[leftmargin=5mm,itemsep=-1ex,topsep=-1ex]}{\end{itemize}}

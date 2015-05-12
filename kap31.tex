@@ -1,0 +1,84 @@
+
+\underline{Wiederholung}
+\begin{itemize}
+\item Bisherige Quantenmechanik für ein Teilchen basiert auf der der Schrödingergleichung.
+\begin{eqnarray*} i \hbar \partial_ t \left | \psi \ro = \ham \left | \psi \ro \end{eqnarray*}
+Für den Zustand $\left | \psi \ro$
+
+\item Wahrscheinlichkeitsinterpretation
+\begin{eqnarray*} \left |\lo n \s \psi \ro \ri |^2 \end{eqnarray*}
+Die obige Gleichung gibt die Wahrscheinlichkeit einen Zustand $\left | n \ro$ zu finden an.
+
+\item Der Hamiltonoperator eines freien Teilchens
+\begin{eqnarray*} \wh \ham  \g \frac{\hat p^2}{2 m} = - \frac {\hbar^2 \nabla ^ 2}{2 m}\\ 
+&{}&\quad \text{mit   } \vec p = - i \hbar \nabla
+\end{eqnarray*}
+\item Kopplung an elektromagnetischen-Felder ist analog  zur Hamiltonmechanik
+\begin{eqnarray*} \vec p \rightarrow \vec p - q \vec A \qquad  \qquad \ham \rightarrow \ham + q \phi \end{eqnarray*} 
+\end{itemize}
+Relativitätstheorie fordert kovariante Formulierung der Naturgesetze.\\
+\underline{Problem:} Die Schrödingergleichung 
+\begin{eqnarray*} i \hbar \partial_ t\left | \psi \ro = - \frac{\hbar ^2}{2 m} \partial_{ \vec r}^2 \psi\end{eqnarray*}
+ist nicht kovariant, da die Ableitungen der Raum- und Zeitkomponenten in unterschiedlichen Ordnungen auftreten.
+
+
+\subsection{Klein-Gordon-Gleichung}
+Verwende das Korrespondenzprinzip
+\begin{eqnarray*} E \rightarrow i \hbar \partial _ t \qquad \qquad \vec p \rightarrow - i \hbar \nabla\end{eqnarray*}
+und den relativistischen Energie-  und Impuls-Zusammenhang
+\begin{eqnarray*} E = \sqrt { m^2 c^4 + c^2 p ^2} . \end{eqnarray*}
+Für die Wellengleichung ergibt sich dann
+\begin{eqnarray*} i \hbar \partial _ t \psi = \sqrt{ m^2c^4 - \hbar ^2c^2 \nabla^2} \psi \end{eqnarray*}
+Die r.S. ist über die Reihenentwicklung definiert
+\begin{eqnarray*} m c^2- \frac{\hbar ^2\nabla^2}{2 m} + \dots \nabla^4 + \dots \end{eqnarray*}
+Das heißt es treten unendlich hohe Ableitungen auf.\\
+\\
+$\longrightarrow$ Die Ausdrücke werden sehr kompliziert. Zeit und Ort treten unsymmetrisch auf, Kovarianz ist nicht offensichtlich.\\
+$\longrightarrow$ Ansatz wird nicht weiter verfolgt. Stattdessen gehen wir von
+\begin{eqnarray*} E^2 = m^2c^4 + c^2p^2\end{eqnarray*} aus.
+\begin{eqnarray*} \Longrightarrow &{}&\boxed{ - \hbar^2 \frac {\partial ^2}{\partial t^2} \psi = \left ( m^2c^4 - \hbar ^2c^2\Delta \ri )\psi} \\ &{}& \quad \wh = \text{ Klein-Gordon-Gleichung}\end{eqnarray*}
+Die Klein-Gordon-Gleichung kann kovariant geschrieben werden:
+\begin{eqnarray*} 
+	\Big ( \partial_{\mu}\partial^{\mu} + \big( \frac{m c}{\hbar }\big)^2\Big) \psi = 0
+\end{eqnarray*}
+Dabei ist $\frac{mc}{\hbar}$ ein Lorentzskalar. 
+
+Analog der Wellengleichung mit einem Massenterm . Dieser definiert eine Länge gemäß
+\begin{eqnarray*} \frac{m c}{\hbar} = \frac{2 \pi}{\lambda _c} .\end{eqnarray*}
+$\lambda_c$ ist die Compton- Wellenlänge.\\
+Konsequenzen der Klein-Gordon-Gleichung:
+\begin{itemize}
+\item Ebene Welle $\exp{\big(i\vec k \vec x -i E \frac{t }{\hbar}\big)}$\\ 
+mit \begin{eqnarray*} E = \pm \sqrt{m^2c^4+ \hbar^2c ^2k^2} \end{eqnarray*}
+d.h. es gibt im Vakuum Lösungen \underline{negativer Energien}. Diese Lösungen werden im Rahmen der {\bf Quantenfeldtheorie} durch {\bf Antiteilchen} erklärt.
+\item Wahrscheinlichkeitsinterpretation\\
+(Dichte und Stromdichte)
+\begin{eqnarray*} \psi^* \left ( \partial_{\mu} \partial^{\mu} + \big (\frac{m c}{\hbar}\big )^2 \ri) \psi - c.c. \g 0 \qquad \qquad c.c. = \text{complex conjugated}\\
+\Rightarrow\quad \psi ^* \partial_{\mu}\partial^{\mu} \psi - \psi \partial_{\mu}\partial^{\mu} \psi ^* \g 0\\
+\Rightarrow\quad \partial_{\mu} \left ( \psi^* \partial^{\mu} \psi - \psi \partial^{\mu} \psi^* \ri ) \g 0 \end{eqnarray*}
+Diese Gleichung hat die Form einer Kontinuitätsgleichung für eine 4-Stromdichte.
+\begin{eqnarray*} 
+	j^{\mu} = \frac{\hbar}{2 m i}\left( \psi^* \partial^{\mu} \psi - \psi \partial^{\mu} \psi^*\ri)
+\end{eqnarray*}
+\underline{Aber:}\\
+Die Zeitkomponente 
+\begin{eqnarray*} 
+	\frac{j^0}c = \rho = \frac{\hbar}{2 m\ i\ c }\left(\psi^* \partial^{0} \psi- \psi \partial^{0} \psi^* \ri) \qquad \text{mit: }\dell^0=\frac{1}{c}\dell_t
+\end{eqnarray*} 
+ist \underline{nicht positiv definit}, da $\psi$ und $\dell_t\psi$ unabhängig gewählt werden können zum Zeitpunkt $t=0$ (Dgl. 2. Ordnung).\\
+$\Longrightarrow$ Wahrscheinlichkeitsinterpretation ist nicht möglich und Klein-Gordon-Gleichung kann keine Einteilchen Quantenmechanik beschreiben.
+
+\item Klein-Gordon-Gleichung in der Quantenfeldtheorie beschreibt geladene Teilchen mit Spin 0 ($\pi$-Mesonen) und ihre anti-Teilchen (mit umgedrehter Ladung),d.h. negativer Ladungsdichte.
+
+\item Kopplung an ein skalares Potential
+\begin{eqnarray*} \Bigg [ \Big ( i \hbar \partial _t - \underbrace{V(r)}_* \Big )^2 + \hbar ^2 c^2\nabla ^ 2 \Bigg ] \psi = m^2c^4 \psi \end{eqnarray*}
+$*$) typisches Skalar $\frac{e^2}{4 \pi \varepsilon_0} \frac 1 r$\\
+Dass heißt die Kopplung an das Potential ist bestimmt durch eine dimensionslose Konstante
+\begin{eqnarray*} \boxed{\alpha  = \frac{e^2}{4 \pi \varepsilon_0 \hbar c} = \frac 1 {137.037}} \quad\text{Feinstrukturkonstante}\end{eqnarray*}
+Die Feinstrukturkonstante ist eine grundlegende Größe in der sog. Quantenelektrodynamik (QED), die die Wechselwirkung von Ladungen und Photonen beschreibt.\\
+Alternativ:
+\begin{eqnarray*} \alpha \g \frac{\text{Coulombenergie zweier Ladungen im Abstand s}}{\text{Photonenenergie  mit der Wellenlänge }r}\\
+\g\frac{\frac{e^2}{4\pi\varepsilon_0 r}}{\hbar c \frac 1 r} = \frac{e^2}{4 \pi\varepsilon_0 \hbar c}\\
+\alpha \g \frac{\text{Compton Wellenlänge}}{\text{Bohrradius}} = \frac{\frac{\hbar}{m c}}{4 \pi \varepsilon_0\frac{\hbar^2}{e^2m}}
+\end{eqnarray*}
+\end{itemize}

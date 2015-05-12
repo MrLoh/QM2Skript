@@ -1,0 +1,49 @@
+\subsection{Lösung der Wellengleichung in kovarianter Form}
+Wir gehen von den inhomogenen Maxwellgleichungen aus:
+\begin{eqnarray*} \partial_{\mu}F^ {\mu\nu} = \mu_0 j^ {\nu} \end{eqnarray*}
+Mit dem Potential 
+\begin{eqnarray*} F^ {\mu\nu} = \partial ^ {\mu}A^ {\nu} - \partial^ {\nu}A^ {\mu}\end{eqnarray*}
+\begin{eqnarray*} \Longrightarrow \underbrace{\partial_{\mu}\partial^ {\mu}}_{\Box} A^ {\nu} - \partial^ {\nu} \underbrace{\partial_{\mu}A^ {\mu}}_{=0} = \mu_0j^{\nu}
+\end{eqnarray*}
+$\partial_ {\mu}A^ {\mu} = 0$ heißt Lorenzbedingung. Die inhomogene Wellengleichung nimmt die Form einer inhomogenen, partiellen Differentialgleichung an.
+\begin{eqnarray*} \boxed{\Box A^ {\nu} = \mu_0 j^ {\nu}}\end{eqnarray*}
+Lösung mit Hilfe der Greenschen Funktion:
+\begin{eqnarray*} \Box_xG(x,x') \g \delta^ {(4)}(x-x')\\
+\text{Im freien Raum gilt   } G(x,x') \g G(x-x')
+\end{eqnarray*}
+Eine 4 dim. Fouriertransformation löst die Gleichung:
+\begin{eqnarray*}
+G(x-x') \g \frac 1 {(2\pi)^ 4} \int d^ 4 k \ \tilde G(k) e^ {-ik(x-x') }\\
+ k^ {\mu} = \Big ( \frac {\omega}c ,\vec k\Big)^T \quad  &{}&\quad k x = \omega t - \vec k\vec x\\
+&{}& \quad \delta^ {(4)} (x) = \frac 1 {(2 \pi)^ 4} \int d^ 4k\ e^ {-ikx}\end{eqnarray*}
+\begin{eqnarray*} \Longrightarrow \boxed{\tilde G = - \frac 1 {k^ 2}}
+\end{eqnarray*}
+\underline {Rücktransformation:}\\
+Für die Rücktransformation müssen die Pole bei $k_0 = \pm \left|\vec k\ri|$ beachtet werden.\\
+$\longrightarrow$ Definiere wie zuvor eine retardierte und avancierte Greensche Funktion, indem die Integration infinitesimal nach $k_0 \pm i\varepsilon$ verschoben wird.\\ \\
+Durchführung: siehe Übung\\
+Ergebnis:
+\begin{eqnarray*} G_ {R/A}(x-x') \g \frac 1 {4\pi R}\Theta\big (\pm(x_0-x_0')\big )\delta(x_0-x_0'\mp R)\\&{}& \text{mit   } R = \left|\vec x-\vec x'\ri|\end{eqnarray*}
+Beachte die sog. {\bf retardierte Zeit}, d.h. dass die Greensche Funktion bei $\vec x$ von Null verschieden ist für 
+\begin{eqnarray*}
+t' = \frac{x_0'}c = \frac {x_0}c - \frac R c = t - \frac{\left|\vec x-\vec x'\ri|}c
+\end{eqnarray*}
+Die Wirkung bei $x'$ findet zu einer früheren Zeit $t - \frac{\left|\vec x-\vec x'\ri|}c$ statt.
+\vspace{1.5cm}
+
+\underline {Kovariante Form}
+\begin{eqnarray*} &{}& \delta\big((x-x')^ 2\big) = \delta\big((x_0-x_0')^ 2- \left|\vec x-\vec x'\ri|^ 2\big) \\
+\g \delta\big((x_0-x_0'-R)(x_0-x_0'+R)\big) \\
+&{}&\qquad \text{mit  }\delta\big(f(x)\big) = \sum\limits_n \frac 1 {\left|f'(x_n)\ri|}\delta(x-x_n)\quad x_n = \text{ Nst.}\\
+\g \frac 1 { 2R} \big( \delta(x_0-x_0' -R) + \delta(x_0-x_0' + R)\big)
+\end{eqnarray*}
+Wegen $\Theta\big(\pm (x_0-x_0')\big)$ tritt immer nur eine $\delta$- Funktion in der Greenschen Funktion auf und es gilt:
+\begin{eqnarray*} \boxed{G_{R/A}(x-x') = \frac 1 {2\pi} \Theta\big(\pm (x_0-x_0')\big)\delta\big((x-x')^ 2\big)}\end{eqnarray*}
+Die Thetafunktionen sind unter  Lorentztransformationen invariant, da die Kausalität erhalten bleibt!\\
+Felder bewegter Ladungen folgen aus
+\begin{eqnarray*}
+j^ {\mu}(x) \g c \sum \limits_i q_i \int d\tau u_{(i)}^ {\mu}(\tau)\delta^  {(4)}\big(x-x_i(\tau)\big)\\\text{und} \ A^ {\mu}(x) \g \int d^ 4x G(x-x') j^ {\mu}(x)
+\end{eqnarray*}
+Für die bewegte Punktladung führt das auf die sog. {\bf Lienard-Wichert-Potentiale}.
+
+

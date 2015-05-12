@@ -1,0 +1,173 @@
+\subsection{Kovariante Formulierung der Elektrodynamik}
+Bisher wurde die Invarianz des Lichtkegels zur Herleitung der relativistischen Mechanik benutzt.\\
+$\longrightarrow$ Lorentztransformation, Minkowskikraft.\\
+$\longrightarrow$ Lichtwellenausbreitung bleibt invariant.\\ \\
+\underline{Frage:} Wie sind die Transformationseigenschaften der Maxwellgleichungen ?\\
+\subsubsection{Viererstrom}
+\begin{itemize}
+\item Wir gehen davon aus, dass die Ladung eines Punktteilchens ein Lorentzskalar ist.
+\item Dies gilt jedoch nicht für die Ladungsdichte $\rho$, da das 3-dimensionale Volumen nicht Lorentzinvariant ist (Längenkontraktion).
+\end{itemize}
+Die Ladungsdichte und die Stromdichte hängen über die {\bf Kontinuitätsgleichung} zusammen.
+\begin{eqnarray*} \frac{\partial}{\partial t} \rho + \nabla \vec j = 0 \end{eqnarray*}
+\underline{Definition:} {\bf Viererstrom} $j^{\mu} = \big ( c\rho, \vec j\big)$\\
+Daraus folgt \begin{eqnarray*} \partial_{\mu}j^{\mu}  = 0 .\end{eqnarray*}
+Die  Kontinuitätsgleichung ist Lorentzinvariant. Anschaulich lässt es sich so betrachten, dass die ruhende Ladung im Inertialsystem IS der Stromdichte im Inertialsystem IS' entspricht.
+
+\subsubsection{Viererpotential}
+\begin{eqnarray*} A^{\mu}  \g \Big ( \frac{\phi}c,\vec A \Big )\\
+\phi \g \text{skalares Potential}\\
+\vec A \g \text{Vektorpotential}\\
+\end{eqnarray*}
+Das Viererpotential kann aus den Maxwellgleichungen hergeleitet werden.\\
+\begin{equation}\label{eq4}
+\vec E = - \grad (\phi) - \dot{\vec A} \qquad \qquad \vec B = \rot( \vec A)
+\end{equation}
+Schreibe die inhomogenen Maxwell-Gleichungen mit den Potentialen (\ref{eq4}) anstelle der $\vec E $- und $\vec B$-Felder.
+\begin{eqnarray*}
+\divergenz \vec E \g -\Delta \phi - \divergenz\dot{\vec A} = \frac{\rho}{\varepsilon_0}\\
+\rot \vec B - \frac 1 {c^2} \dot{\vec E} \g \grad \ \divergenz \vec A - \Delta \vec A + \frac 1 {c^2} \grad \dot \phi + \frac 1 {c^2} \ddot{\vec A } = \mu_0 \vec j
+\end{eqnarray*}
+Zur Vereinfachung wird die folgende Eichtransformation durchgeführt.
+\begin{eqnarray*} \text{wähle }\frac 1 {c^2 } \dot \phi + \divergenz \vec A \g 0 \text{  (Lorentzbedingung)}\\
+\Rightarrow -\Delta \phi + \frac 1 {c^2} \ddot \phi \g \frac{\rho}{\varepsilon_0} = \mu_0 c^2 \rho\\
+\Rightarrow -\Delta \vec A + \frac 1 {c^2} \ddot{\vec A} \g \mu_0 \vec j
+\end{eqnarray*}
+Die obigen Gleichungen haben die Form von Wellengleichungen, daher benutzen wir den \\ d'Alembertoperator $\square$, um diese auszudrücken. 
+\begin{eqnarray*}
+\Box  = \frac 1 {c^2} \partial_t^2 - \Delta \quad \quad \text{ist Lorentzskalar}\\
+\Longrightarrow \text{  Viererpotential:}\qquad A^{\mu} = \Big ( \frac{\phi}c , \vec A \Big )
+\end{eqnarray*}
+Die inhomogenen Maxwellgleichungen sind  explizit kovariant:
+\begin{eqnarray*}
+\Box A^{\mu} \g \mu_0 j^{\mu}\\
+\partial_{\mu} A^{\mu} \g 0 \qquad \widehat = \text{  Lorenzbedingung}
+\end{eqnarray*}
+
+
+\subsubsection{Feldstärketensor}
+\begin{alignat*}{7}
+&\vec B &=& \nabla \times \vec A \qquad \qquad \qquad &\vec E  \ \ &=& -\nabla \phi - \dot{\vec A}\\
+&B_x &=& \partial_yA_z-\partial_zA_y \qquad\qquad\qquad &E_x &=& -\partial_x\phi - \partial_tA_x\\
+&{}&=& -\partial^2A^3+ \partial^3A^2\qquad\qquad\qquad &{} &=& \ \partial^1A^0c - \partial^0A^1c
+\end{alignat*}
+Die rechten Seite hat die Form eines zweistufigen Tensors:\begin{eqnarray*}\boxed{F^{\mu\nu} = \partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}} \quad \widehat = \ \ \text{\bf Feldstärketensor}\end{eqnarray*}
+Ein antisymmetrischer Tensor 2. Stufe besitzt 6 freie Komponenten:
+\begin{eqnarray*}
+F^{\mu\nu} = \left ( \begin{array}{cccc} 0	& \frac{-E_x}c	&\frac{-E_y}c	&\frac{-E_z}c\\
+				\frac{E_x}c	& 0		&-B_z		&B_y\\
+				\frac{E_y}c	& B_z		& 0 		& -B_x\\
+				\frac{E_z}c	&-B_y		&B_x		&0 \end{array}\ri)
+\end{eqnarray*}\\
+Der kovariante Feldstärketensor ergibt sich zu:
+\begin{eqnarray*}
+F_{\mu\nu} = g_{\mu\lambda}g_{\nu\kappa}F^{\lambda \kappa} =
+ \left ( \begin{array}{cccc}            0       & \frac{E_x}c	&\frac{E_y}c	&\frac{E_z}c\\
+				\frac{-E_x}c	& 0		&-B_z		&B_y\\
+				\frac{-E_y}c	& B_z		& 0 		& -B_x\\
+				\frac{-E_z}c	&-B_y		&B_x		&0 \end{array}\ri)
+\end{eqnarray*}
+Die Vorzeichen ergeben sich durch die Regeln
+\begin{center}
+	\begin{tabular}{cccccc}
+		$\lambda \kappa$ &sind beide raumartig& $\rightarrow$ & $(-1) \cdot (-1)$ & $\rightarrow$& +1 \\
+		$\lambda \kappa$ &sind beide zeitartig & $\rightarrow$& $(+1) \cdot (+1)$ & $\rightarrow$& +1 \\
+		 $\lambda \kappa$ &eines ist zeit-, das andre raumartig & $\rightarrow$ & $(-1) \cdot (+1)$& $\rightarrow$ & -1 \\
+	\end{tabular}
+\end{center}
+
+\underline{Definitionen}
+\begin{itemize}
+\item{\bf Total asymmetrischer Tensor 4. Stufe}
+\begin{eqnarray*}
+\varepsilon^{\alpha \beta\gamma\delta} = \left \{ \begin{array}{cc} +1 & \text{für }\alpha = 0, \beta = 1, \gamma= 2, \delta = 3\\&\text{und gerade Permutationen}\\ -1 &\text{für ungerade Permutationen}\\ 0 &\text{sonst} \end{array} \ri.
+\end{eqnarray*}
+\item{\bf Dualer Feldstärketensor}
+\begin{eqnarray*} \boxed{ \tilde{F}^{\alpha\beta} = \frac 1 2 \varepsilon^{\alpha\beta\gamma\delta} F_{\gamma\delta}}
+\end{eqnarray*}
+Explizit ist der duale Feldstärketensor:
+\begin{eqnarray*} \tilde F^{\alpha\beta} = \left ( \begin{array}{cccc}
+ 0	&	-B_x	&	-B_y	&	 -B_z\\
+B_x	&	0	&	\frac{E_z}c	&-\frac{E_y}c\\
+B_y	&	-\frac{E_z}c	&	0	&\frac{E_x}c\\
+B_z	&	\frac{E_y}c	&-\frac{E_x}c	&	0
+\end{array}\ri )
+\end{eqnarray*}
+\end{itemize}
+\underline{Maxwellgleichungen:}
+\begin{itemize}
+\item{Inhomogen}
+\begin{eqnarray*}
+\underbrace{\nabla \vec E}_{\partial_{\mu}F^{\mu 0}c} = \underbrace{\frac{\rho}{\varepsilon_0}}_{\mu_0j^0c}\qquad \qquad \underbrace{\nabla \times \vec B}_{\partial_iF^{i j}} - \underbrace{\frac 1 {c^2}\dot{\vec E}}_{-\partial_oF^{0 j}} = \underbrace{\mu_0 \vec j}_{\mu_0 j^j}
+\end{eqnarray*}
+\begin{eqnarray*}\Rightarrow\boxed{\partial_{\mu}F^{\mu\nu} = \mu_0j^{\nu}}\end{eqnarray*}
+
+\item{homogen}
+\begin{eqnarray*} \nabla \times \vec E + \dot{\vec B} = 0 \qquad\qquad \nabla \vec B = 0\end{eqnarray*}
+Mit Hilfe des dualen Feldstärketensors lassen sich die homogenen Maxwellgleichungen in einer Gleichung zusammenfassen.
+\begin{eqnarray*} \boxed{ \partial_{\mu}\tilde F^{\mu\nu} = 0}\end{eqnarray*}
+Eine äquivalente Formulierung ist:
+\begin{eqnarray*} \partial^{\lambda} F^{\mu\nu} + \partial^{\mu}F^{\nu\lambda} + \partial^{\nu}F^{\lambda\mu} = 0\end{eqnarray*}
+$\Longrightarrow$ Explizite kovariante Form der Maxwellgleichungen.
+
+\end{itemize}
+
+
+
+
+
+\underline{Transformationsverhalten der Felder}\\
+Feldstärketensor: ${F'}^{\mu\nu} = \Lambda_{\kappa}^{\mu}\Lambda_{\delta}^{\nu}F^{\kappa \delta}$\\
+Für einen Boost in $x$-Richtung ergibt sich 
+\begin{eqnarray*} \Lambda_{\nu}^{\mu} = \left ( \begin{array}{cccc}
+\gamma		& -\beta \gamma		&0	&0\\
+-\beta\gamma	&\gamma			&0	&0\\
+0		&0			&1	&0\\
+0		&0			&0	&1 \end{array}\ri)
+\end{eqnarray*}
+						
+Es gilt:
+\begin{eqnarray*}
+E'_x \g E_x \qquad \qquad B'_x = B_x\\
+E'_y \g \gamma E_y  - \beta\gamma B_z c\\
+B'_y \g \gamma B_y  +\beta\gamma \frac{E_z}c\\
+E'_z \g \gamma E_z  + \beta\gamma B_y c\\
+B'_z \g \gamma B_z  - \beta\gamma \frac{E_y}c
+\end{eqnarray*}
+$\longrightarrow$ Felder in $x$-Richtung bleiben unverändert.\\
+Felder senkrecht zur $x$-Richtung: $\vec E$- und $\vec B$-Feld Komponenten werden gemischt.\\ \\
+\underline{Beispiel:} Statisches Feld $E_y$ (sonst in Komponenten $=0$)\\
+\begin{eqnarray*}
+\rightarrow E'_y = \gamma E_y\qquad\qquad B'_z = -\beta\gamma\frac{E_y}c = -\beta \frac{E'_y}c\\
+\rightarrow \vec B\perp\vec E \text{  und  } \perp \vec v
+\end{eqnarray*}
+Das $\vec B$-, $\vec E$-Feld und der Geschwindigkeitsvektor $\vec v$ stehen allgemein immer senkrecht zueinander in der Elektrostatik.\\ Es gilt:
+\begin{eqnarray*} \vec B' = \vec v \times \frac{\vec E'}{c^2} \end{eqnarray*}
+
+
+\subsubsection{Geladenes Teilchen}
+Lorentzkraft ist $\vec F = q\big(\vec E + \vec v\times \vec B \big)$.\\
+Die Minkowskikraft ist gegeben durch:
+\begin{eqnarray*}
+K^{\mu} \g \gamma q \big ( \vec v \frac{\vec E}c, \vec E + \vec v \times \vec B \big)\\
+\g q \big( \vec u \frac{\vec E}c , u_0 \frac{\vec E}c + \vec u \times \vec B\big)\\
+&{}&\text{mit }u^{\mu} = \gamma(c,\vec v)
+\end{eqnarray*}
+\begin{eqnarray*}
+\text{d.h.}\quad \frac{dp_0}{d\tau} \g \frac q c \vec u\cdot\vec E\qquad \text{Energieänderung}\\
+\frac{d\vec p}{d\tau} \g q \Big ( u_0 \frac{\vec E} c + \vec u\times \vec B\Big )
+\end{eqnarray*}
+Die rechte Seite kann geschrieben werden als:
+\begin{eqnarray*}\boxed{\frac{dp^{\mu}}{d\tau} = qF^{\mu\nu}u_{\nu}}\end{eqnarray*}
+$\longrightarrow$ Das Gleichungssystem ist \underline{kovariant} geschlossen.
+\begin{eqnarray*}
+\partial_{\mu} F^{\mu\nu} \g \mu_0 j^\nu\\
+\partial_{\mu}\tilde F^{\mu\nu} \g 0\\
+m\frac{du^{\mu}}{d\tau} \g q F^{\mu\nu} u_{\nu}\\
+&{}&\longrightarrow  u^{\mu} \text{   bestimmt   }j^{\mu}
+\end{eqnarray*}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

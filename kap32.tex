@@ -1,0 +1,300 @@
+\subsection{Dirac-Gleichung}
+Neuer Ansatz mit der Ableitung erster Ordnung (zur Vermeidung negativer Dichte).
+\begin{eqnarray*} 
+	\boxed{i \hbar \partial_ t \psi = \big ( - i\hbar c \alpha^k \partial_k + \beta m c^2\big) \psi} \quad &{}& \wh = \text{Dirac-Gleichung}\\ &{}&\text{mit }( - i\hbar c \alpha^k \partial_k + \beta m c^2\big) = \ham \quad k\in\{x,y,z\}
+\end{eqnarray*}
+$\psi$ kann keine einkomponentige Wellenfunktion sein, da $\alpha^k$ und $\beta $ hermitische Matrizen sein müssen. Für einfache Zahlen ( für $\alpha^k = 1 $ z.B.) wäre nicht einmal die Drehinvrianz der Gleichung gewährleistet.
+\begin{eqnarray*} \Longrightarrow \psi = \left ( \begin{array}{c} \psi_1 \\ \vdots \\ \psi_N \end{array} \ri )\qquad \qquad \wh = \text{,,Spinor''} \end{eqnarray*}
+\underline{Forderungen}
+\begin{enumerate}
+\item Aus dem Korrespondezprinzip folgt, dass die Lösung ebenfalls die Klein-Gordon-Gleichungen erfüllen sollen. Speziell für ebene Wellen soll gelten:
+\begin{eqnarray*} E^2 = m^2 c^4 + c^2p^2 \end{eqnarray*}
+
+\item Erhaltener 4-Strom mit positiv definiter Dichte.\\
+(Kandidat: $\rho = \psi^\dagger \psi= \sum \limits_{i =1}^{N} \big|\psi_i\big|^2$)
+\item Die Lorentzkovarianz muss erfüllt sein.
+\end{enumerate}
+
+\subsubsection{Lösungen der Klein-Gordon-Gleichung}
+Erneute Anwendung von $i\hbar \partial_t = \ham$ ergibt
+\begin{eqnarray*}
+-\hbar^2\partial_t ^2\psi \g \Big [ - \hbar ^2c^2\alpha^k\alpha ^l \partial_k\partial_l + \beta^2m^2c^4 - i \hbar c^3 m (\alpha^k\beta + \beta\alpha^k) \partial_k \Big ]\psi\\
+&\overset! = & \big[-\hbar^2c ^2\sum\limits_k \partial_k^2 + m^2c^4\big ] \psi
+\end{eqnarray*}
+Hieraus folgt für $\alpha$ und $\beta$
+\begin{alignat}{4}
+\beta^2 \g \mathds{1} \qquad \qquad &\beta\alpha^k + \alpha^k \beta \g 0\\
+(\alpha^k)^2 \g \mathds{1} \qquad\qquad& \alpha^k\alpha^l + \alpha^l\alpha^k \g 2 \delta^{kl} \mathds {1}
+\end{alignat}
+Diese Bedingungen stellen wir an die Dirac-Matrizen um die erste Forderung zu erfüllen.
+
+\subsubsection{Konstruktion des Viererstroms}
+Multipliziere die Dirac-Gleichung mit $\psi^\dagger = (\psi_1^*, \dots,\psi_N^*)$
+\begin{eqnarray*} 
+	\Rightarrow\quad i\hbar \psi^\dagger \partial_t \psi = - i \hbar \ c \ \psi^\dagger \alpha^k \partial_k \psi + m c^2\psi^\dagger \beta \psi
+\end{eqnarray*}
+Komplex konjugiert:
+\begin{eqnarray*} 
+	-i \hbar (\partial_t \psi^\dagger) \psi  = i\hbar c ( \partial_k \psi^\dagger) \alpha^k \psi + m c^2 \psi^\dagger \beta \psi
+\end{eqnarray*}
+Bei der obigen Gleichung haben wir ausgenutzt, dass gilt
+\begin{eqnarray*} 
+	{\alpha^k}^\dagger = \alpha ^k \qquad \qquad \beta ^\dagger = \beta
+\end{eqnarray*}
+Bilde die Differenz:
+\begin{eqnarray*}
+i\hbar \Big [ \psi^ \dagger \partial_ t \psi + (\partial_t \psi^\dagger) \psi\Big] = - i \hbar c \Big [ \psi^\dagger \alpha ^k \partial_k \psi + (\partial_k \psi^\dagger) \alpha^k \psi \Big]
+\end{eqnarray*}
+Umschreiben der obigen Gleichung in der Form einer Kontinuitätsgleichung.
+\begin{eqnarray*} \partial_t (\psi^\dagger \psi) = - \partial_k \Big(c \psi^\dagger\alpha^k \psi\Big) \end{eqnarray*}
+Identifiziere die Viererstromdichte:
+\begin{eqnarray*}
+\partial_{\mu} j^{\mu} \g 0\\
+\text{mit}\  j^0 \g c \psi^\dagger\psi = c \rho\\
+\vec j \g c \psi^\dagger \alpha^k \psi
+\end{eqnarray*}
+Damit ist die Zeitkomponente positiv definit und kann als Wahrscheinlichkeitsdichte interpretiert werden. (Forderung 2)
+
+Man kann außerdem eine Dreierstromdichte $c \alpha^k$ definieren, welche die Rolle der Geschwindigkeit spielt. Dies folgt auch aus $\vec v_{o p} = -\frac i {\hbar} \big [ \vec r, \ham  \big]$).
+
+\subsubsection{Konstruktion des Spinorraums, Dirac-Darstellung}
+Frage: Wie viele Komponenten hat ein Spinor $\psi$ und welche Form habe die Dirac-Matrizen? 
+
+Damit haben $\alpha^k$ und $\beta$ die Eigenwerte $\pm 1$ (da $(a^k)^2 = \mathds 1 = \beta ^2$.
+
+Aus dem Antikommutator $\{\beta, \alpha^k\}= 0$ folgt:
+\begin{eqnarray*}
+&&\alpha^k \beta = - \beta \alpha^k \quad\Rightarrow\quad \alpha^k = - \beta \alpha^k \beta
+\\
+&& \Sp \alpha^k = - \Sp(\beta\alpha^k \beta) \ = \ -\Sp(\alpha^k \beta^2) = - \Sp(\alpha^k)
+\\
+&\Rightarrow& \Sp (\alpha^k) = 0 
+\\
+&\text{analog folgt: }& \Sp(\beta) = 0
+\end{eqnarray*}
+Die Zahl der Eigenwerte $+1$ und $-1$ muss gleich sein. $\longrightarrow \ \ N$ ist gerade.\\
+\underline{$N= 2?$} Geht nicht, da es nur drei untereinander antikommutierende $2\times2$ Matrizen gibt (Paulimatrizen).\\
+\underline{$N = 4?$} Geht!\\
+$\Longrightarrow$ Spinoren haben (mindestens) 4 Komponenten und die Dirac-Matrizen sind $4\times4$ Matrizen!\\ \\
+\underline{Standarddarstellung:} Dirac-Darstellung\\
+($\sigma^k = 2\times 2 $ Paulimatrizen, es gilt .
+\begin{alignat}{4}
+\beta \g \left ( \begin{array}{lr}\mathds{1} & 0 \\ 0 & -\mathds{1} \end{array} \right) \qquad \qquad \alpha^k \g \left ( \begin{array}{lr} 0 &\sigma^k \\ \sigma^k & 0 \end{array}\ri )\\
+\text{also   } \beta \g \left ( \begin{array}{cccc} 1 &0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&-1\end{array}\ri) \qquad\qquad \alpha^2 \g \left( \begin{array}{cccc}0&0&0&-i\\0&0&i&0\\0&+i&0&0\\-i&0&0&0\end{array}\ri)
+\end{alignat}
+\underline{Ausblick:}\babsatz $N=4$ wird erklärt durch den Spin - $\frac 1 2$ - Freiheitsgrad und der Existenz von Antiteilchen, beides sind Konsequenzen der relativistischen Formulierung.\eabsatz
+
+\subsubsection{Kovariante Form der Dirac- Gleichung}
+Multipliziere die Dirac-Gleichung mit $\frac \beta c$.
+\begin{eqnarray*}
+-i\hbar \beta \partial_0 \psi - i \hbar \beta\alpha^k \partial_k\psi + m c \psi = 0
+\end{eqnarray*}
+Definition der $\gamma$-Matrizen
+\begin{eqnarray*} \boxed{ \gamma^0 = \beta \quad \quad \gamma^k = \beta \alpha^k}\end{eqnarray*}
+Es gilt:
+\begin{alignat*}{4}
+\left(\gamma^0\ri)^\dagger \g \ \gamma^0 \qquad \qquad \left(\gamma^k \ri)^\dagger \g - \gamma ^k\qquad\\
+\left(\gamma^0 \ri)^2 \g \mathds{1} \qquad\qquad \left(\gamma^k \ri)^2 \g \beta \ \alpha^k \ \beta\ \alpha^k \ \ \\
+&{}&\quad \g-(\alpha^{k})^2 = -\mathds{1}
+\end{alignat*}
+Zusammengefasst gilt für Antikommutatoren:
+\begin{eqnarray*}\boxed{\gamma^{\mu}\gamma^{\nu} + \gamma^{\nu}\gamma^{\mu} = 2 g^{\mu\nu}\mathds{1}}\end{eqnarray*}
+Feynman-Slash:$\qquad \slashed{\nu} = \gamma^{\mu}\nu_{\mu}$
+\begin{eqnarray*} \longrightarrow (-i\hbar \slashed{\partial} + m c)\psi = 0\end{eqnarray*}
+Mit der Konvention: $\hbar = 1 = c$ gilt:
+\begin{eqnarray*} (-i\slashed{\partial} + m) \psi = 0\end{eqnarray*}
+Explizit:
+\begin{eqnarray*} \gamma^0 = \left (\begin{array}{cc} \mathds {1} &0\\0&- \mathds{1}\end{array}\ri) \qquad \qquad \gamma^k = \left( \begin{array}{cc}0 &\sigma^k\\-\sigma^k&  0 \end{array}\ri) \end{eqnarray*}
+Beachte: Unter der Lorentztransformation $x' = \Lambda x$ müssen neben den Koordinaten auch die {\bf Spinoren} transformiert werden. 
+\begin{eqnarray*}
+(-i\hbar \gamma^{\mu}\partial_{\mu} + m c)\psi(x) \g 0\\
+\rightarrow (-i\hbar \gamma^{\mu}\partial_{\mu}'+ m c ) \psi'(x') \g 0\\
+\text{mit  } \psi'(x') \g S(\Lambda) \cdot \psi(x)
+\end{eqnarray*}
+$S$ ist die Transformationsmatrix für die Spinoren.\\
+Die $\gamma$-Matrizen sind in allen Inertialsystemen gleich, sie entsprechen 4-Vektoren in dem Sinne, dass sich die {\bf Bilinearform}
+\begin{eqnarray*} \psi^{\dagger} \gamma^0\gamma^ {\mu} \psi = \bar{\psi}\gamma^{\mu} \psi\end{eqnarray*}
+wie ein 4-Vektor transformiert.
+
+
+\subsubsection{Nachweis der Kovarianz}
+Gesucht ist eine Transformation $S(\Lambda)$ der Spinoren $(\psi' = S(\Lambda)\psi)$, die gleichzeitig die Dirac-Gleichung forminvariant lässt.\\
+Erinnerung: $\Lambda$ ist eigentliche Lorentztransformation (Boosts oder Drehungen).
+\begin{eqnarray*}
+x'^{\mu} = \frac{\partial x'^{\mu}}{\partial x^{\nu}} x^{\nu}  = \Lambda^{\mu}_{\ \ \nu} x^{\nu} \qquad x' = \Lambda x
+\end{eqnarray*}
+Die Transformation $S(\Lambda)$ ist eine $4\times4$-Matrix, die von $\Lambda$ abhängt. Es gilt:
+\begin{eqnarray*}
+\psi'(x') \g \psi'(\Lambda x) = S(\Lambda) \psi(x) = S(\Lambda)\psi(\Lambda^{-1}x')\\
+\psi(x) \g S^{-1}(\Lambda) \psi'(x') = S^{-1}(\Lambda)\psi'(\Lambda x)\\
+\g S(\Lambda^{-1}) \psi'(\Lambda x)\\
+\Longrightarrow &{}& S(\Lambda^{-1}) = S^{-1} (\Lambda)
+\end{eqnarray*}
+Forminvarianz der Dirac-Gleichung
+\begin{eqnarray*}
+(i\hbar\gamma^{\mu} \underbrace{\partial_{\mu}}_{\Lambda_{\mu}^{\;\,\nu}\partial_{\nu}'} - m c\Big) \underbrace{\psi(x)}_{S^{-1}(\Lambda)\psi'(x')} \g 0\\
+\Big( i \hbar \underbrace{S(\Lambda) \gamma^{\mu}S^{-1}(\Lambda)\Lambda_{\mu}^{\ \ \nu}}_{\gamma^{\nu}}\partial_{\nu}' - m c) \psi'(x')\g 0 
+\end{eqnarray*}
+
+\begin{gather}\label{eq:5a}
+\rightarrow \boxed{S(\Lambda) \gamma^{\mu}S^{-1}(\Lambda)\Lambda_{\mu}^{\;\,\nu} = \gamma^{\nu}} \tag{5a} \\ \label{eq:5b}
+\rightarrow \boxed{ S(\Lambda)\gamma^{\mu}S^{-1}(\Lambda) = \Lambda_{\nu}^{\ \ \mu}\gamma^{\nu}} \tag{5b}
+\end{gather}
+
+Die umrahmte Gleichung ist die fundamentale Bestimmungsgleichung für die $S(\Lambda)$.\\
+Falls $S(\Lambda)$ existiert, ist die Kovarianz der Dirac-Gleichung bewiesen.\\
+Um Gleichung \ref{eq:5b} aus \ref{eq:5a} zu erhalten, multiplizieren wir Gleichung(\ref{eq:5a}) von links mit $\Lambda^{\sigma}_{\ \ \rho}g_{\sigma \ \nu}$ und benutzen
+\begin{eqnarray*}
+ \Lambda_{\ \ \mu}^{\nu} \ \  g_{\nu \sigma} \Lambda_{\ \ \rho}^{\sigma} \overset * = g_{\mu \rho} = g_{\rho \mu}
+\end{eqnarray*}
+*) Dies ist die Orthogonalitätsbedingung der Lorentztransformation.\marginpar{???}
+\begin{eqnarray*}
+S(\Lambda)\gamma^{\mu}S^{-1}(\Lambda) g_{\rho\mu} = \Lambda^{\sigma}_{\ \ \rho} \underbrace{g_{\sigma\nu}\gamma^{\nu}}_{= \gamma_{\sigma}}
+\end{eqnarray*}
+\underline{Explizite Konstruktion für $S$}
+durch eine infinitesimale Lorentztransformation $\Delta\omega_{\;\,\nu}^{\mu}\ll 1$. 
+\begin{eqnarray*} \Lambda_{\ \ \nu}^{\mu} = g_{\ \ \nu}^{\mu} + \Delta\omega_{\ \ \nu}^{\mu} \end{eqnarray*}
+Aus der Invarianz von
+\begin{eqnarray*} ds ^2 = g_{\mu\nu}dx^{\mu}dx^{\nu}\end{eqnarray*}
+folgt
+\begin{eqnarray*}
+\boxed{\Delta \omega^{\mu\nu} = -\Delta \omega^{\nu\mu}}\\
+\rightarrow \Delta \omega^T = - g\Delta\omega g\end{eqnarray*}
+Multiplizieren mit $g$ von rechts an die Gleichung ergibt:
+\begin{eqnarray*}
+\rightarrow \big (\Delta\omega g \big)^T = -\Delta \omega g
+\end{eqnarray*}
+$\rightarrow \quad \Delta \omega$  ist antisymmetrisch.\\
+$\Delta \omega$ hat sechs unabhängige Komponenten. Diese sind drei Boosts und drei Drehungen.\\
+\\
+Zum Beispiel einen Boost in $x$-Richtung ist
+\begin{eqnarray*} 
+	-\Delta \omega^{0}_{\;\,1}=\Delta \omega^{01} = \frac{\Delta v}{c}
+\end{eqnarray*}
+oder eine Rotation um die $x$-Achse:
+\begin{eqnarray*} \Delta \omega^2 _{ \ \ 3} \g - \Delta \omega^{3 2} = \Delta \varphi \\
+%(\Delta \omega g)^{\mu\nu}) \g \Delta \omega^{\mu}_{\ \ \rho}\ \  g^{\rho \nu} = \Delta \omega^{\mu\nu}\\
+\Lambda^{\mu\nu} \g g^{\mu\nu} + \Delta\omega^{\mu\nu}\\
+\text{Entwickle } S(\Lambda^{\mu\nu}) \text{  in  }\Delta\omega^{\mu\nu}&{}&\\
+S_{\Delta} \g \hat{\mathds {1}} - \frac i 4 \underbrace{\sigma_{\mu\nu}}_{*} \Delta \omega^{\mu\nu}
+\end{eqnarray*}
+*)Die $\sigma$ sind $4\times 4$ Matrizen, die im 4-dimensionalen Raum der Wellenfunktion $\psi$ operieren. Sie bestimmt man aus der Orthogonalitätsbedingung der Lorentztransformation.
+\begin{eqnarray*}
+S_{\Delta}(\Delta \omega^{\mu\nu}) \g S_{\Delta} (-\Delta\omega^{\nu\mu}) = \mathds{1} + \frac i 4 \sigma_{\mu\nu}\Delta \omega^{\nu\mu}\\
+\sigma_{\mu\nu}\Delta\omega^{\mu\nu} \g - \sigma_{\mu\nu}\Delta\omega^{\nu\mu} = - \sigma_{\nu\mu} \Delta\omega^{\mu\nu}\end{eqnarray*}
+\begin{eqnarray*} \boxed{\sigma_{\mu\nu} = - \sigma_{\nu\mu}}\end{eqnarray*}
+Wir können auch $S \ S^{-1} = \mathds{1}$ bis zur 1.Ordnung in $\Delta \omega$ entwickeln.
+\begin{eqnarray*} S^{-1} = \hat {\mathds{1}} + \frac i 4 \sigma_{\mu\nu} \Delta\omega^{\mu\nu}\end{eqnarray*}
+Einsetzen von $S$ und $S^{-1}$ in die Gleichung für $\gamma$ ergibt:
+\begin{eqnarray*} S \ \gamma^{\mu}S^{-1} \g \Lambda^{\nu\mu} \gamma_{\nu}\\
+\g \big ( \hat {\mathds{1}} - \frac i 4 \sigma_{\mu\nu} \Delta\omega^{\mu\nu}\big) \gamma^{\alpha} \big ( \hat {\mathds{1}} + \frac i 4 \sigma_{\mu\nu} \Delta\omega^{\mu\nu}\big)\\
+\g \big ( g^{\alpha}_{\ \ \beta} + \Delta\omega^{\alpha}_{\ \ \beta} \big ) \gamma^{\beta}
+\end{eqnarray*}
+$\Longrightarrow$ Bedingung für $\sigma$ und $S$:
+\begin{eqnarray*} \Delta \omega^{\alpha}_{\ \ \beta} \ \gamma^{\beta} = - \frac i 4 \Delta \omega^{\mu\nu} \big[\sigma_{\mu\nu}, \gamma^{\alpha}\big ]\end{eqnarray*}
+Diese Gleichung wird durch
+\begin{eqnarray*}
+	\boxed{ \sigma_{\mu\nu} = \frac i 2 \big[\gamma_{\mu},\gamma_{\nu}\big ]}
+\end{eqnarray*}
+erfüllt. Beweis siehe Übung. Eine infinitesimale Transformation ist dann
+\begin{eqnarray*} S_{\Delta} = 1 + \frac 1 8 \big[\gamma_{\mu},\gamma_{\nu}\big]\Delta\omega^{\mu\nu}. \end{eqnarray*}
+$\Longrightarrow$ Bilde eine endliche Lorentztransformation.
+\begin{eqnarray*}
+\Delta \omega^{\mu\nu}\underset{N \rightarrow\infty}{\longrightarrow} 0 \quad &{}&\quad \omega^{\mu\nu} = N \Delta\omega^{\mu\nu}\\
+\Longrightarrow S(\omega^{\mu\nu}) \g \underset{N \rightarrow \infty}{\lim}S(\Delta \omega^{\mu\nu})^N = \underset{N \rightarrow \infty}{\lim} \big( \mathds 1 - \frac i 4 \sigma_{\mu\nu}\Delta\omega^{\mu\nu}\big)^N\\
+\g \underset{N \rightarrow \infty}{\lim} \big( \mathds 1  - \frac i 4 \sigma_{\mu\nu}\frac{\omega^{\mu\nu}} N\big)^N
+\end{eqnarray*}
+\begin{eqnarray*} \longrightarrow \boxed{S(\omega^{\mu\nu}) = \exp\left(-\frac i 4 \sigma_{\mu\nu} \ \omega^{\mu\nu}\ri)}
+\end{eqnarray*}
+Diese Transformation existiert, somit ist die kovarianz der der Dirac-Gleichung gezeigt.
+
+\begin{enumerate}
+\item {\bf Raumspiegelungen $x' = -x \quad t' = t$}
+\begin{eqnarray*} \Lambda^{\mu}_{\ \ \nu} \g g^{\mu}_{\ \ \nu} = \left ( \begin{array}{cccc} 1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1\end{array}\ri)\\
+P\gamma^{\mu} P^{-1} \g g^{\mu \ \mu}\gamma^{\mu}\\
+P \g\text{Paritätstransformation}\\
+P\gamma^0 P^{-1} \g \gamma^0 \\
+P  \gamma^ i P^{-1} \g-\gamma^i
+\end{eqnarray*}
+Eine Lösung ist zum Beispiel
+\begin{eqnarray*} P = \gamma^0 = \left ( \begin{array}{cccc} 1&0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&-1\end{array}\ri)\end{eqnarray*}
+$P$ ist bis auf einen Phasenfaktor $ e^{i\varphi}$ bestimmt.
+
+\item {\bf Endliche Drehung um die $z$-Achse}\\
+Hier gilt dann für$\varphi \ll 1$
+\begin{alignat*}{6}
+\omega^1_{\ \ 2} \g \varphi \g - \omega^{1   2} \g - \omega_{1 2}\\
+\omega^2_{\ \ 1} \g -\varphi \g + \omega^{2   1} \g + \omega_{2 1}
+\end{alignat*}
+Per Definition ist es in diesem Fall nur notwendig eine $\sigma$-Matrix zu kennen.\marginpar{?}
+\begin{eqnarray*}
+\sigma_{1  2} \g \frac i 2 \big[\gamma_1,\gamma_2\big] = \frac i 2 \left[\left( \begin{array}{cc} 0 &-\sigma_1\\+\sigma_1 & 0 \end{array}\ri), \left( \begin{array}{cc} 0 &-\sigma_2\\+\sigma_2 & 0 \end{array}\ri)\ri]\\
+\g \frac i 2 \left ( \begin{array}{cc}-\sigma_1\sigma_2+\sigma_2\sigma_1 & 0 \\0&-\sigma_1\sigma_2 + \sigma_2 \sigma_1 \end{array}\ri) = \left( \begin{array}{cc} \sigma_3 & 0\\0 & \sigma_3 \end{array}\ri)
+\end{eqnarray*}
+$\longrightarrow$ Analogie zur Drehung mit zwei Spinoren um die $z$-Achse.
+\begin{eqnarray*}
+\Lambda_{\ \ \nu}^{\mu} =  \left( \begin{array}{cccc} 1 &0&0&0\\0&\cos({\scriptstyle\varphi})&\sin({\scriptstyle\varphi})&0\\0&-\sin({\scriptstyle\varphi})&\cos({\scriptstyle\varphi})&0\\0&0&0&-1\end{array}\ri)
+\end{eqnarray*}
+D.h.
+\begin{eqnarray*}
+S(\Lambda) \g \exp({\scriptstyle -\frac i 4 (\sigma_{1  2}\omega^{1  2} + \sigma_{2 1}\omega^{2 \ 1})}) = e^{\frac i 2 \sigma_{1 2} \varphi} \qquad \text{mit } \sigma_{1  2}^ 2 = \mathds 1\\
+S(\Lambda^{-1}) \g S^{-1}(\Lambda) = e^{-\frac i 2 \sigma_{1  2} \varphi} = S(\Lambda)^{\dagger}
+\end{eqnarray*}
+Im folgenden soll nun $S(\Lambda)$ berechnet werden:
+\begin{eqnarray*}
+S(\Lambda) \g e^{\frac i 2 \sigma_{1 \ 2}\varphi}\\
+\g \sum \limits_{m = 0}^{\infty} \frac 1 {(2m)!}\left (\frac{i\varphi}2\ri)^{2m}\underbrace{\sigma_{1 2}^{2m}}_{\mathds 1} + 
+\sum \limits_{m = 0}^{\infty} \frac 1 {(2m + 1)!}\left( \frac{i\varphi}2\ri)^{2m + 1}\underbrace{\sigma_{1 2}^{2m + 1}}_{\sigma_{1 2}}\\
+\g \underbrace{\sum \limits_{m = 0}^{\infty} \frac{(-1)^m}{(2m)!} \left( \frac{\varphi}2\ri)^{2m}}_{\cos({\scriptstyle\frac{\varphi}2})} + 
+i \sigma_{1  2}\underbrace{\sum \limits_{m = 0}^{\infty} \frac{(-1)^m}{(2m+ 1)!} \left( \frac{\varphi}2\ri)^{2m+1}}_{\sin({\scriptstyle\frac{\varphi}2})}\\
+\g \cos({\scriptstyle \frac{\varphi}2}) + i \sigma_{1\ 2} \sin({\scriptstyle\frac{\varphi}2}) =
+\left( \begin{array}{cccc}e^{i\frac{\varphi}2}&0&0&0\\0&e^{-i\frac{\varphi}2}&0&0\\0&0&e^{i\frac{\varphi}2}&0\\0&0&0&e^{-i\frac{\varphi}2}\end{array}\ri)
+\end{eqnarray*}
+$\Rightarrow$ Keine Mischung der Spinorkomponenten.\\
+Verhalten der oberen bzw. unteren Komponenten entspricht üblicher Rotation eines Spin$\frac 1 2$.\\
+$\rightarrow$ Wir identifizieren diese Freiheitsgrade mit dem Spin des Elektrons und $\frac{\hbar}2 \sigma_{1  2}$ mit der $z$-Komponente des Spinoperators.
+
+\item {\bf Boost in $x$-Richtung mit $v$}\\
+$\omega \ll 1 \qquad (v\ll c)$\\
+Hier gilt:
+\begin{alignat*}{6}
+\omega_{01} \g - \omega_{1 0 } &=:& -\omega &{}&\\
+\omega^0 _{\ \ 1} \g - \omega \g \omega_{01} \g - \omega^{01}\\
+\omega^1_{\ \ 0} \g - \omega \g - \omega_{1 0} \g \omega^{1 0}
+\end{alignat*}
+Hierbei ist $\omega$ wie folgt definiert$ \big(\tanh({\scriptstyle \omega})= \frac v c\big)$.
+\begin{eqnarray*}\Lambda^{\mu}_{\ \ \nu} \g \left( \begin{array}{cccc}\cosh({\scriptstyle \omega})&-\sinh({\scriptstyle \omega})&0&0\\
+-\sinh({\scriptstyle \omega})&\cosh({\scriptstyle \omega})&0&0\\
+0&0&1&0\\0&0&0&1\end{array}\ri)\\
+\sigma_{01} \g \frac i 2 \big[\gamma_0, \gamma_1 \big]\\
+\g \frac i 2 \left[ \left(\begin{array}{cc}1&0\\0&-1\end{array}\ri), \left(\begin{array}{cc}0&-\sigma_1\\ \sigma_1&0\end{array}\ri)\ri ]\\
+\g \frac i 2 \left( \begin{array}{c c}0 & -2 \sigma_1\\ - 2 \sigma_1 & 0 \end{array}\ri ) = - i\left( \begin{array}{c c}0 &  \sigma_1\\ \sigma_1 & 0 \end{array}\ri ) = i\alpha_1 \qquad\text{mit: }\alpha_1^2=\mathds{1}
+\end{eqnarray*} 
+Einsetzen in die Transformationsmatrix ergibt:
+\begin{eqnarray*}
+S = e^{-\frac i2\sigma_{01}\omega} = e^{-\frac 1 2\alpha_1 \omega} = S^{\dagger}
+\end{eqnarray*}
+Betrachten die Inverse der Transformationsmatrix:
+\begin{eqnarray*}
+S^{-1} = e^{\frac 1 2\alpha_1 \omega} \neq S^{\dagger}
+\end{eqnarray*}
+\begin{eqnarray*}
+S \g e^{- \frac 1 2\alpha_1 \omega }\\
+\g \sum \limits_{m = 0}^{\infty} \frac{1}{(2m)!} \left ( \frac{- \omega}2\ri)^{2m} \alpha_1^{2m}+
+\sum \limits_{m = 0}^{\infty} \frac{1}{(2m+1)!} \left ( \frac{- \omega}2\ri)^{2m+1} \alpha_1^{2m+1}\\
+\g \underbrace{\sum \limits_{m = 0}^{\infty} \frac{1}{(2m)!} \left ( \frac{+ \omega}2\ri)^{2m}}_ {\cosh({\scriptstyle \frac{\omega}2})} -\alpha_1
+\underbrace{\sum \limits_{m = 0}^{\infty} \frac{1}{(2m+1)!} \left ( \frac{+ \omega}2\ri)^{2m+1}}_{\sinh({\scriptstyle\frac{\omega}2})}\\
+\g \cosh({\scriptstyle \frac{\omega} 2}) - \alpha_1 \sinh({\scriptstyle\frac{\omega}2})\\
+\g \left ( \begin{array}{cccc} \cosh({\scriptstyle\frac{\omega}2})&0&0&-\sinh({\scriptstyle\frac{\omega}2})\\
+0&\cosh({\scriptstyle\frac{\omega}2})&-\sinh({\scriptstyle\frac{\omega}2})&0\\
+0&-\sinh({\scriptstyle\frac{\omega}2})&\cosh({\scriptstyle\frac{\omega}2})&0\\-\sinh({\scriptstyle\frac{\omega}2})&0&0&\cosh({\scriptstyle\frac{\omega}2})\end{array}\ri)
+\end{eqnarray*}
+$\Longrightarrow$ Mischung aller Spinorkomponenten des Lorentzboost.
+Vergleiche mit Lorentzboost: 
+\begin{eqnarray*}
+	\Lambda_{\mu}^{\;\,\nu}=\lim_{N\to\infty}\left( g_{\mu}^{\;\,\nu} + \frac{\omega_{\mu}^{\;\,\nu}}{N} \right)^N &\overset{!}=& \left(\begin{array}{cccc} \cosh\omega & -\sinh\omega & 0 & 0 \\ -\sinh\omega & \cosh\omega & 0 & 0 \\  0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{array}\ri)
+\end{eqnarray*}	
+vergleich liefert: $\cosh\omega=\gamma\qquad \sinh\omega=\beta\gamma \quad\Rightarrow\quad \tanh\omega=\beta$
+\end{enumerate}
+
+

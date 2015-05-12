@@ -1,0 +1,91 @@
+\subsection{Erzeuger und Vernichter}
+Um Operatoren im Fockraum in einer teilchenzahlunabhängigen Weise auszudrücken, führen wir sog. Erzeugungs- und Vernichtungsoperatoren ein, die Hilberträume mit verschiedenen Teilchenzahlen verbinden.
+\subsubsection{Bosonen:} Erzeugungsoperator erhöht die Besetzungszahl um 1
+\begin{eqnarray*}
+a_i^\dagger \left | \dots n_i \dots \ro = \sqrt{n_i + 1 } \left | \dots n_i + 1\dots \ro 
+\end{eqnarray*}
+Der adjungierte Operator erniedrigt Besetzung um 1
+\begin{eqnarray*}
+a_i \left | \dots n_i \dots \ro = \sqrt {n_i} \left | \dots n_i - 1 \dots \ro
+\end{eqnarray*}
+Insbesondere gilt für den Vakuumszustand:
+\begin{eqnarray*}
+a_i \left | 0 \ro = 0\qquad \text{f.a.}\quad i
+\end{eqnarray*}
+Aus der Definition folgen die Vertauschungsrelationen
+\begin{eqnarray*}
+\left [ a_i,a_j \ri] = 0  \qquad \left[a_i^\dagger,a_j^\dagger\ri] = 0 \qquad \left[ a_i,a_j^\dagger \ri] = \delta_{i j}
+\end{eqnarray*}
+\underline{Beweis}
+\begin{eqnarray*}
+&{}&\left[a_i^\dagger ,a_j^\dagger\ri ] \left | \dots,n_i,\dots,n_j,\dots\ro \qquad i\neq j\\
+\g \left(a_i^\dagger a_j^\dagger - a_j^\dagger a_i^\dagger \ri ) \left | \dots, n_i,\dots,n_j,\dots\ro\\
+\g \left( \sqrt{n_i+1}\sqrt{n_j+1}-\sqrt{n_j+1}\sqrt{n_i+1}\ri)\left|\dots,n_{i+1},\dots,n_{j+1},\dots\ro\\
+\g  0
+\end{eqnarray*}
+\begin{eqnarray*}
+&{}&\left[a_i,a_j^\dagger\ri] \left | \dots ,n_i,\dots,n_j,\dots\ro\\
+\g \left(a_i a_j^\dagger - a_j^\dagger a_i\ri ) \left | \dots,n_i,\dots,n_j,\dots\ro\\
+&\overset{(i\neq j)} =& \big(\underbrace{\sqrt{n_i}\sqrt{n_j+1} - \sqrt{n_j+1}\sqrt{n_i}}_{=0}\big) \left| \dots,n_{i-1},\dots,n_{j+1},\dots\ro
+\end{eqnarray*}
+\begin{eqnarray*}
+&{}&\left[a_i,a_i^\dagger\ri] \left| \dots,n_i,\dots\ro\\
+\g \left (a_ia_i^\dagger - a_i^\dagger a_i\ri) \left |\dots,n_i,\dots\ro\\
+\g a_i \sqrt{n_i+1} \left |\dots,n_{i+1},\dots\ro-a_i^\dagger \sqrt{n_i}\left |\dots,n_{i-1},\dots\ro\\
+\g (n_{i}+1) \left |\dots,n_i,\dots\ro\ -n_i\left |\dots,n_i,\dots\ro\\
+\g \left |\dots,n_i,\dots\ro\qquad\qquad \text{vgl.  }\left[a,a^\dagger \ri]=1\qquad \text{(harm.Oszi.)}
+\end{eqnarray*}
+Alle Zustände können aus dem Vakuumzustand erzeugt werden:
+\begin{eqnarray*}
+\left | n_1,n_2,\dots\ro = \frac 1 {\sqrt{n_1\cdot n_2\cdot\dots}}\left(a_1^\dagger\ri)^{n_1}\left(a_2^\dagger\ri)^{n_2}\dots \left | 0 \ro
+\end{eqnarray*}
+Um die Teilchenzahl festzustellen, konstruiert man den Besetzungszahloperator: $\hat n_i = a_i^\dagger a_i$ mit 
+\begin{eqnarray*}
+\hat n_i = \left | \dots n_i \dots \ro = a_i^\dagger  a_i \left | \dots n_i \dots \ro = n_i \left | n_i \ro
+\end{eqnarray*}
+Gesamtteilchenzahloperator $\hat N = \sum \limits_i \hat n_i$
+\begin{eqnarray*} \lo N \ro = \lo n_1 \dots \s \hat N \s n_1 \dots \ro = \sum n_i \end{eqnarray*}
+Für nicht wechselwirkende Teilchen können wir die Eigenzustände des Hamiltonoperators als Einteilchenzustände benutzen ($\ham_1 \phi_1 = \varepsilon_i \phi_i$).\\
+Der Vielteilchen-Hamiltonoperator
+\begin{eqnarray*} \wh \ham \g \sum \limits_i \varepsilon _i \hat n_i\\
+\lo \ham \ro \g \big< n_1 \dots \s \sum \limits_i \varepsilon_i\hat n_i \s n_1 \dots\big> = \sum \varepsilon_i n_i
+\end{eqnarray*}
+
+
+\subsubsection{Fermionen}
+Wegen der Antisymmetrie unter Vertauschung zweier Teilchen muss auf die Reihenfolge der Anwendung fermionscher Operatoren geachtet werden.
+\begin{eqnarray*}
+S_- \left | i_1,i_2,\dots,i_N\ro \g a_{i_1}^\dagger a_{i_2}^\dagger\dots a_{i_N}^\dagger \left | 0 \ro\\
+S_- \left | i_2,i_1,\dots,i_N\ro \g a_{i_2}^\dagger a_{i_1}^\dagger\dots a_{i_N}^\dagger \left | 0 \ro\\
+ \g -S_-\left |i_1,i_2,\dots,i_N\ro\\
+\Longrightarrow a_{i_1}^\dagger a_{i_2}^\dagger + a_{i_2}^\dagger a_{i_1}^\dagger \g 0\\
+\left\{a_{i_1}^\dagger,a_{i_2}^\dagger \ri \} \g 0 \qquad \text{Antikommutator}\\
+\text{allg.  }\left\{a_i^\dagger,a_j^\dagger \ri\} \g 0
+\end{eqnarray*}
+es folgt für $i = j $: 
+\begin{eqnarray*} a_i^\dagger a_i^\dagger = \left(a_i^\dagger \ri )^2 = 0\end{eqnarray*}
+Alle Zustände können aus dem Vakuum erzeugt werden die Reihenfolge muss einmal festgelegt werden.
+\begin{eqnarray*}
+\left | n_1,n_2,\dots \ro = \left(a_1 ^\dagger \ri)^{n_1} \left(a_2^\dagger \ri)^{n_2}\dots \left | 0 \ro
+\end{eqnarray*}
+Für Erzeugungs- und Vernichtungsoperatoren folgt:\\
+\begin{eqnarray*}
+a_i^\dagger \left | \dots n_i \dots \ro \g \left (1 -n_1 \ri) \underbrace{(-1)^{\sum \limits_{j<i}n_j}}_{=p_i} \left | \dots n_i+1 \dots \ro\\
+a_i \left | \dots n_i \dots \ro \g n_i p_i \left | \dots n_i-1 \dots \ro
+\end{eqnarray*} 
+Beachte: $n_i = 0,1$.
+Besetzungszahloperator  $\hat n_i = a_i^\dagger a_i$
+\begin{eqnarray*} \hat n_i \left | \dots n_i \dots \ro = n_i \left | \dots n_i \dots \ro
+\end{eqnarray*}
+Algebra folgt zum Beispiel aus:
+\begin{eqnarray*} &{}& \left \{a_i,a_i^\dagger \ri \} \left | \dots n_i \dots\ro\\
+\g \left(a_ia_i^\dagger + a_i^\dagger a_i \ri) \left | \dots n_i\dots\ro\\
+\g a_i(1 -n_i)p_i \left | \dots n_i+1\dots\ro + a_i^\dagger n_ip_i \left |\dots n_i-1\dots\ro\\
+\g \left [(n_i+1)(1-n_i) + n_i(2-n_i)\ri] \left | \dots n_i\dots\ro\\
+&\overset{n^2 = n}{=}& \left | \dots n_i \dots \ro\\
+\Longrightarrow \left\{a_i,a_i^\dagger \ri \} \g 1
+\end{eqnarray*}
+Es gilt für Fermionen
+\begin{eqnarray*}
+\boxed{\{a_i,a_j\} = 0 \qquad \{a_i^\dagger,a_j^\dagger\} = 0 \qquad \{a_i,a_j^\dagger\} =\delta _{ij}}
+\end{eqnarray*}

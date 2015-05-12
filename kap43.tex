@@ -1,0 +1,54 @@
+\subsection{Operatoren in zweiter Quantisierung}
+\subsubsection{Einteilchenoperator}
+\begin{eqnarray*}
+T = \sum \limits_{\alpha = 1}^N T_\alpha \qquad \left(\text{z.B. }T_\alpha = \frac{p_\alpha^2}{2m}\ri)
+\end{eqnarray*}
+In Basis $\left|i\ro$ gilt:
+\begin{eqnarray*}
+T_{ij} \g \lo i \s T \s j \ro\\
+\text{und } t \g \sum \limits_{ij}T_{ij} \left | i \ro\lo j\ri|
+\end{eqnarray*}
+Zusammen
+\begin{eqnarray*}
+T = \sum \limits _{ij } T_{ij} \underbrace{\sum \limits_{\alpha = 1}^N \left |i \ro_\alpha\lo j\right |_\alpha }_{O}
+\end{eqnarray*}
+Die Wirkung von $O$ auf einen Zustand ist es ein Teilchen im Zustand $\left |j\ro$ durch eines im Zustand $\left |i \ro$ zu ersetzen. Die Wirkung ist identisch zum Operator $a_i^\dagger a_i$, d.h. es gilt 
+\begin{eqnarray*} a_i^\dagger a_i = \sum \limits_{\alpha = 1}^N \left |i\ro_\alpha\lo j\ri| _\alpha.\end{eqnarray*}
+Wir erhalten
+\begin{eqnarray*}
+	\boxed{T = \sum \limits_{i j} T_{i j} a_i^\dagger a_j}
+\end{eqnarray*}
+Allgemeine Form eines Einteilchenoperators unabhängig von der Teilchenzahl!
+
+\subsubsection{Zweiteilchenoperaor}
+\begin{eqnarray*}
+V &=& \frac 1 2 \sum_{\alpha\neq \beta} V (\vec r_\alpha, \vec r_\beta)
+\\
+&=& \frac 1 2 \sum_{ijkm}\sum_{\alpha \neq \beta} \underbrace{\,_{\alpha}\bra{i}\!\,_{\beta}\bra{j}V\ket{k}_{\alpha}\ket{m}_{\beta}}_{V_{ijkm}} \quad \ket{i}_{\alpha}\ket{j}_{\beta}\,_{\alpha}\bra{k}\!\,_{\beta}\bra{m}
+\\
+&=& a_i^\dagger a_j^\dagger a_m a_k\\
+\end{eqnarray*}
+wobei gilt
+\begin{eqnarray*}
+\sum_{\alpha\neq \beta} \ket{i}_{\alpha}\ket{j}_{\beta}\,_{\alpha}\bra{k}\!\,_{\beta}\bra{m} &=&
+\sum_{\alpha \neq \beta} \underbrace{\ket{i}_{\alpha}\,_{\alpha}\bra{k}\ket{j}_{\beta}\,_{\beta}\bra{m}}_{a_i^\dagger a_k \quad a_j^\dagger a_m} - \underbrace{\braket{k}{j}}_{\delta_{kj}}\quad \sum_{\alpha} \underbrace{\ket{i}_{\alpha}\,_{\alpha}\bra{m}}_{a_i^\dagger a_m}
+\end{eqnarray*}
+Allgemeiner Zweiteilchenoperator:
+\begin{eqnarray*} \boxed{ V = \frac 1 2 \sum \limits_{ijkm} V_{ijkm} a_i^\dagger a_j^\dagger a_m a_k}\end{eqnarray*}
+Matrixelement:
+\begin{eqnarray*} V_{ijkm} = \int d^3 x_1 d^3x_2\quad \phi_i^* (\vec x_1) \phi^* _j(\vec x_2) V(\vec x_1,\vec x_2) \phi_k(\vec x_1)\phi_m(\vec x_2)
+\end{eqnarray*}
+
+
+\subsubsection{Hamiltonoperator}
+\begin{eqnarray*}
+\wh \ham = \sum_{ij} T_{ij} a_i^\dagger a_j + \sum \limits_{ijkm} V_{ijkm} a_i^\dagger a_j^\dagger a_m a_k
+\end{eqnarray*}
+Der erste Term beschreibt die kinetische Energie in der Eigenbasis von $\ham_1$, der zweite Term die Wechselwirkung zwischen jeweils zwei Teilchen. 
+
+Der Hamiltonoperator hat folgende Eigenschaften: 
+\begin{itemize}
+\item Operator im Fockraum unabhängig von Teilchenzahl
+\item für Bosonen und Fermionen identisch
+\item aufgrund des nicht quadratischen Terms $\sim a^\dagger a^\dagger a a$ im Allgemeinen nicht lösbar
+\end{itemize}
